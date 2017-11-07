@@ -7,5 +7,5 @@
 
 DATE=$(date  +%Y-%m-%d_%H%M)
 #echo "$DATE"
-raspistill -vf -o ~/Documents/camera/$DATE.jpg
+raspistill -vf -o ~/Documents/access/camera/$DATE.jpg
 

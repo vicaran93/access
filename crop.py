@@ -14,9 +14,9 @@ import sys,math,ast
 
 '''
 # Path variables
-path="coins.png"
-save_to="" #same directory
-cropped_img_name="test.jpg"
+path="/home/pi/Documents/access/camera/test1.jpg"
+save_to="/home/pi/Documents/access/camera/" #"" for same directory
+cropped_img_name="crop_test.jpg"
 
 # Load image:
 img = Image.open(path)

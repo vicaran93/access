@@ -5,11 +5,12 @@ import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(18,GPIO.IN)
 
-GPIO.input(18)
+x = GPIO.input(18)
 
-#for i in range(4):
+print(x)
 
-#	val = GPIO.input(18)
-#	print(val)
-
+while GPIO.input(18) == 0:
+	print("not pressed yet")
+	
+print("button was pressed")
 GPIO.cleanup()

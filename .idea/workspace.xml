@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46b778e6-1966-45fe-9548-75ad97d0a50b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkInput.py" afterPath="$PROJECT_DIR$/checkInput.py" />
     </list>
     <ignored path="access.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,10 +32,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkInput.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="checkInput.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkInput.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
+            <state relative-caret-position="215">
+              <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+              <folding>
+                <element signature="e#18#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="checkInput2.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/checkInput2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="453">
               <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
               <folding />
             </state>
@@ -54,6 +63,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/checkInput.py" />
+        <option value="$PROJECT_DIR$/checkInput2.py" />
       </list>
     </option>
   </component>
@@ -304,7 +314,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/checkInput.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
+        <state relative-caret-position="215">
+          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+          <folding>
+            <element signature="e#18#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkInput2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
           <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
           <folding />
         </state>

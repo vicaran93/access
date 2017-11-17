@@ -1,4 +1,6 @@
+#!/usr/bin/python
 import RPi.GPIO as GPIO
+import os
 
 # This method uses pin 18 to check its input; 10 times every second
 # initialize input pins
@@ -24,7 +26,8 @@ while GPIO.input(18) == 0:
             pin17_pressed = False
             pin27_pressed = False
         if once:
-            print("PIN4 pressed")
+            print("PIN4 pressed. Running showGreen.py")
+	    os.system('python showGreen.py')
             once = False
             pin4_pressed = True
 
@@ -35,7 +38,8 @@ while GPIO.input(18) == 0:
             pin4_pressed = False
             pin27_pressed = False
         if once:
-            print("PIN17 pressed")
+            print("PIN17 pressed. Running showRed.py")
+	    os.system('python showRed.py')
             once = False
             pin17_pressed = True
 
@@ -46,9 +50,10 @@ while GPIO.input(18) == 0:
             pin4_pressed = False
             pin17_pressed = False
         if once:
-            print("PIN27 pressed")
+            print("PIN27 pressed. Taking picture...")
+	    os.system('./takepic.sh')
             once = False
             pin27_pressed = True
 
-print("PIN18 was pressed")
+print("PIN18 was pressed. Program finished.")
 GPIO.cleanup()

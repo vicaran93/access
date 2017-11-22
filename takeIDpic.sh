@@ -9,5 +9,9 @@ DATE=$(date  +%Y-%m-%d_%H%M)
 #echo "$DATE"
 raspistill -vf -o ~/Documents/access/camera/$DATE.jpg
 
+# Call crop.py  to crop image that we just took
+python crop.py $DATE
+
+$name=$DATE."_cropped.jpg"
 # Call add_ID.py  to upload image to the server
-python add_ID.py $DATE
+python add_ID.py $name

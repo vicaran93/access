@@ -12,6 +12,8 @@ raspistill -vf -o ~/Documents/access/camera/$DATE.jpg
 # Call crop.py  to crop image that we just took
 python crop.py $DATE
 
-$name="$DATE_cropped" #.jpg added in add_ID.py
+$name="$DATE_cropped"
+ echo $name
+#.jpg added in add_ID.py
 # Call add_ID.py  to upload image to the server
 python add_ID.py $name

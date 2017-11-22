@@ -18,29 +18,33 @@ flag2 = True
 
 flag=1 # do not init to 1 or 0
 
-while GPIO.input(18) == 0:
+while GPIO.input(18) == 0: # Blue button to break while loop
     if flag2:
-	flag2 = False
-	print("Waiting for buttons to be pressed..(press blue button to exit)")
-    if GPIO.input(4) == 1:
+        flag2 = False
+        print("Waiting for buttons to be pressed..(press blue button to exit)")
+    if GPIO.input(4) == 1: #first button
         if once:
             print("PIN4 pressed. Running showGreen.py")
-	    os.system('python showGreen.py')
+            os.system('python showGreen.py')
             once = False
             flag = 0
 
-    if GPIO.input(17) == 1:  # pressed
+    if GPIO.input(17) == 1:  # second button
         if once:
-            print("PIN17 pressed. Running showRed.py")
-	    os.system('python showRed.py')
+            print("Second button (PIN17) pressed. ")
+            # Running showRed.py: os.system('python showRed.py')
+            print("Entering new ID mode! Press: \n 1. Blue button (PIN18) to exit\n 2. First button (PIN4) to take a picture and upload it to server ")
+            while GPIO.input(18) == 0:  # Blue button to break while loop
+
+            # Setting up flags
             once = False
             flag = 0
 
-    if GPIO.input(27) == 1:  # pressed
+    if GPIO.input(27) == 1:  # third
         if once:
             print("PIN27 pressed.")
-	    os.system('./takepic.sh')
-	    print("Picture was taken")
+            os.system('./takepic.sh')
+            print("Picture was taken")
             once = False
 
     if flag == 0:

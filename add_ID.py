@@ -8,7 +8,7 @@ import sys,os
 
 # Path variables
 path="/home/pi/Documents/access/camera/"
-image_name=sys.argv[1] #"test.jpg" in laptop or "test1_cropped.jpg" in RPi
+image_name=sys.argv[1]+".jpg" #"test.jpg" in laptop or "test1_cropped.jpg" in RPi
 final_path=path+image_name
 # Load image:
 #img = Image.open(final_path)

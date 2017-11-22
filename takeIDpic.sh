@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # This shell script will take a picture using the RPi camera and then it will
 # save the image in the "camera" folder with specific DATE name to be then store in the server.
 # Note: The camera is assumed to have its connection at the top so that the upside part of the picture corresponds

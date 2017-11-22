@@ -30,7 +30,7 @@ save_to="/home/pi/Documents/access/camera/" #"" for same directory
 # Initializing settings:
 #   Read if there are inputs from command line
 if len(sys.argv) == 5: #meaning that we have 4 inputs from command line 'filename width height [x,y]'
-    print("4 inputs detected!")
+    #print("4 inputs detected!")
     file_name = sys.argv[1]
     width =int(sys.argv[2])
     height = int(sys.argv[3])
@@ -38,7 +38,7 @@ if len(sys.argv) == 5: #meaning that we have 4 inputs from command line 'filenam
     xy= ast.literal_eval(xy) #'[1,2]' --> [1,2]
 elif len(sys.argv) == 2:
     # Meaning  that we have only one input so it has only the name of the file
-    print("One input detected. Using input as the file name and using default cropping settings")
+    #print("One input detected. Using input as the file name and using default cropping settings")
     file_name = sys.argv[1]
     # Load image:
     path = path+file_name+".jpg" # assuming jpg extension which is the one that we use when we take a picture

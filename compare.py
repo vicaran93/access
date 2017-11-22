@@ -24,7 +24,7 @@ final_url=base_url+"/compare.php"
 
 with open(final_path, 'rb') as f: response = requests.post(final_url, files={'userfile': f})
 
-print(response.text) #TEXT/HTML
+print("\nSERVER RESPONSE:\n"+response.text) #TEXT/HTML
 if response.text[0] == "I": # Image received...
     print("We got response back. Show green LED!")
     os.system('python showGreen.py')

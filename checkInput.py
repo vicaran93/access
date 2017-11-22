@@ -21,42 +21,44 @@ flag=1 # do not init to 1 or 0
 while GPIO.input(18) == 0: # Blue button to break while loop
     if flag2:
         flag2 = False
-        print("Waiting for buttons to be pressed..(press blue button to exit)")
+        print("Waiting for buttons to be pressed:\n1. First button (PIN4) to take a picture in 'compare mode'.\n2. Second button (PIN17) to go into 'add new ID mode'. \n3. EXIT/blue button (PIN18) to exit.")
     if GPIO.input(4) == 1: #first button
         if once:
-            print("First (PIN4) pressed. Running showGreen.py")
-            os.system('python showGreen.py')
+            print("First button (PIN4) pressed. Entering 'compare mode' ")
+            os.system('./takepic.sh')
+
             once = False
             flag = 0
+	    flag2 = True
 
     if GPIO.input(17) == 1:  # second button
         if once:
             print("Second button (PIN17) pressed. ")
             # Running showRed.py: os.system('python showRed.py')
-            print("Entering new ID mode! Press: \n 1. Third button (PIN27) to exit mode\n 2. First button (PIN4) to take a picture and upload it to server ")
+            print("Entering new ID mode! Press: \n 1. First button (PIN4) to take a picture and upload it to server\n 2. RESET button to exit new ID mode")
             while GPIO.input(27) == 0:  # Third button to break while loop
                 if GPIO.input(4) == 1:  # first button
                     if once:
-                        print("First button (PIN4) pressed. Taking new ID  picture")
+                        print("First button (PIN4) pressed. Taking and adding  new ID  picture...")
                         os.system('./takeIDpic.sh')
                         #print("Picture was taken") #assuming it was taken correctly (check ways to print a better status e.g. error variables)
                         once = False
                         flag = 0
-			flag2 = True #To show msg "Waiting to press.."
                         break #exit while loop
             # Setting up flags
             once = False
             flag = 0
+	    flag2 = True #To show msg "Waiting to press.."
 
-    if GPIO.input(27) == 1:  # third
-        if once:
-            print("Third button (PIN27) pressed.")
-            #os.system('./takepic.sh')
+    #Third button is just for reset
+    #if GPIO.input(27) == 1:  # third button
+    #    if once:
+    #        print("Third button (PIN27) pressed.")
             #print("Picture was taken")
-            once = False
+    #        once = False
 
     if flag == 0:
             once = True
             flag = 1
-print("PIN18 was pressed. Program finished.")
+print("Blue button (PIN18) was pressed. Program finished.")
 GPIO.cleanup()

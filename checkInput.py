@@ -14,13 +14,14 @@ GPIO.setup(27, GPIO.IN)
 # print(x)
 
 once = True
-pin4_pressed = False
-pin17_pressed = False
-pin27_pressed = False
+flag2 = True
 
 flag=1 # do not init to 1 or 0
 
 while GPIO.input(18) == 0:
+    if flag2:
+	flag2 = False
+	print("Waiting for buttons to be pressed..(press blue button to exit)")
     if GPIO.input(4) == 1:
         if once:
             print("PIN4 pressed. Running showGreen.py")
@@ -37,8 +38,9 @@ while GPIO.input(18) == 0:
 
     if GPIO.input(27) == 1:  # pressed
         if once:
-            print("PIN27 pressed. Taking picture...")
+            print("PIN27 pressed.")
 	    os.system('./takepic.sh')
+	    print("Picture was taken")
             once = False
 
     if flag == 0:

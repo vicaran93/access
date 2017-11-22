@@ -1,5 +1,5 @@
 import requests
-import sys
+import sys,os
 
 '''
  Image name should be pass through console i.e sys.argv[1]. It then opens file in "/home/pi/Documents/access/camera/"
@@ -22,9 +22,11 @@ print(response.text) #TEXT/HTML
 if response.text == "Upload successful":
     print("We got response back. File is uploaded!")
     #show green LED
+    os.system('python showGreen.py')
 elif  response.text == "Upload error":
     print("Upload error detected")
     #show red LED
+    os.system('python showRed.py')
 else: print("No reponse detected")
 
 print(response.status_code, response.reason) #HTTP

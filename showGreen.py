@@ -11,12 +11,12 @@ GPIO.setup(12,GPIO.OUT)
 
 def blinkOnce(pin):
 	GPIO.output(pin,True)
-	time.sleep(0.5)
+	time.sleep(10) #0.5
 	GPIO.output(pin,False)
-	time.sleep(0.5)
+	#time.sleep(0.5)
 	return
 
-for i in range(0,10):
+for i in range(0,1):
 	blinkOnce(12)
 
 GPIO.cleanup()

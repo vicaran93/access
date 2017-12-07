@@ -15,7 +15,7 @@ def blinkOnce(pin):
 	GPIO.output(pin,False)
 	#time.sleep(0.5)
 	return
-
+print("Green LED on! (10s)")
 for i in range(0,1):
 	blinkOnce(12)
 

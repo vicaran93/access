@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import RPi.GPIO as GPIO
 import os
+from datetime import datetime,timedelta
 
 # This method uses pin 18 to check its input; 10 times every second
 # initialize input pins
@@ -25,7 +26,11 @@ while GPIO.input(18) == 0: # Blue button to break while loop
     if GPIO.input(4) == 1: #first button
         if once:
             print("First button (PIN4) pressed. Entering 'compare mode' ")
+	    t1 = datetime.now()
             os.system('./takepic.sh')
+	    t2 = datetime.now()
+	    delta = t2 - t1 - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
+	    print("Time taken:"+str(delta.seconds)+" s")
 
             once = False
             flag = 0
@@ -40,8 +45,15 @@ while GPIO.input(18) == 0: # Blue button to break while loop
                 if GPIO.input(4) == 1:  # first button
                     if once:
                         print("First button (PIN4) pressed. Taking and adding  new ID  picture...")
+			#SECONDS=0
+			t1 = datetime.now()
                         os.system('./takeIDpic.sh')
                         #print("Picture was taken") #assuming it was taken correctly (check ways to print a better status e.g. error variables)
+			#duration=$SECONDS
+			#echo "Time taken was: $(($duration / 60)) minutes and $(($duration % 60)) seconds."
+			t2 = datetime.now()
+			delta = t2 - t1 - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
+			print("Time taken:"+str(delta.seconds)+" s")
                         once = False
                         flag = 0
                         break #exit while loop

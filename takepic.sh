@@ -9,7 +9,8 @@
 
 DATE=$(date  +%Y-%m-%d_%H%M)
 #echo "$DATE"
-raspistill -vf -o ~/Documents/access/camera/$DATE.jpg
+#raspistill -vf -o ~/Documents/access/camera/$DATE.jpg
+raspistill -ISO 800 -ss 80000 -br 80 -co 100 -vf -o ~/Documents/access/camera/$DATE.jpg
 
 # Call crop.py  to crop image that we just took
 python crop.py $DATE

@@ -21,7 +21,10 @@ python crop.py $DATE
 
 DATE+=$'_cropped'
 
-#.jpg added in add_ID.py
+python img2bw.py $DATE
+
+DATE+=$'_bw'
+
 # Call add_ID.py  to upload image to the server
 python add_ID.py $DATE
 

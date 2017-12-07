@@ -35,7 +35,7 @@ b=b.point(lambda i: i * 0)
 #green = img
 
 green_img = Image.merge('RGB', (r, g, b))
-green_img.show()
+#green_img.show()
 #new_img = np.zeros(img.shape);
 #new_img[:,:,2] = green
 
@@ -67,7 +67,7 @@ g[ np.where(g > 0) ] = 255;
 
 b_w_img = Image.fromarray(g)
 #b_w_img = Image.merge('RGB', (r, g, b))
-b_w_img.show()
+#b_w_img.show()
 
 bw_img_name=file_name+"_bw.jpg"
 b_w_img.save(save_to+bw_img_name)

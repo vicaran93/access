@@ -16,4 +16,9 @@ raspistill -ISO 800 -ss 80000 -br 80 -co 100 -vf -o ~/Documents/access/camera/$D
 python crop.py $DATE
 
 DATE+=$'_cropped'
+
+python img2bw.py $DATE
+
+DATE+=$'_bw'
+
 python compare.py $DATE

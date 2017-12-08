@@ -22,8 +22,8 @@ python img2bw.py $DATE
 
 DATE+=$'_bw'
 
-# Call add_ID.py  to upload image to the server
-python add_ID.py $DATE
+# Call add_ID.py  to upload TEMPLATE to the server
+#python add_ID.py $DATE
 
 python compare.py $DATE
 

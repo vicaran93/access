@@ -10,6 +10,8 @@ GPIO.setup(18, GPIO.IN)
 GPIO.setup(4, GPIO.IN)
 GPIO.setup(17, GPIO.IN)
 GPIO.setup(27, GPIO.IN)
+GPIO.setup(23, GPIO.IN)
+GPIO.setup(24, GPIO.IN)
 
 # x = GPIO.input(18)
 # print(x)
@@ -22,7 +24,7 @@ flag=1 # do not init to 1 or 0
 while GPIO.input(18) == 0: # Blue button to break while loop
     if flag2:
         flag2 = False
-        print("Waiting for buttons to be pressed:\n1. First button (PIN4) to take a picture in 'compare mode'.\n2. Second button (PIN17) to go into 'add new ID mode'. \n3. EXIT/blue button (PIN18) to exit.")
+        print("Waiting for buttons to be pressed:\n1. First button (PIN4) to take a picture in 'compare mode' <sensor>.\n2. Second button (PIN17) to go into 'add new ID mode'. \n3. Test camera \n4. Test server communication \n5. EXIT/blue button (PIN18) to exit.")
     if GPIO.input(4) == 1: #first button
         if once:
             print("First button (PIN4) pressed. Entering 'compare mode' ")
@@ -68,6 +70,24 @@ while GPIO.input(18) == 0: # Blue button to break while loop
     #        print("Third button (PIN27) pressed.")
             #print("Picture was taken")
     #        once = False
+    if GPIO.input(23) == 1: # test camera
+	if once:
+            print("Test: Camera (PIN23)")
+	    os.system('./test_camera.sh')
+
+            once = False
+            flag = 0
+	    flag2 = True
+
+    if GPIO.input(24) == 1: # test server
+	if once:
+            print("Test: Server Connection (PIN24)")
+	    os.system('python test_server.py')
+
+            once = False
+            flag = 0
+	    flag2 = True
+
 
     if flag == 0:
             once = True

@@ -9,11 +9,13 @@ content = {'test_var': 'test1'}
 response = requests.post(final_url, data=content)
 
 if response.text[0] == "S":
-    print("Test connection to Heroku and S3 database working")
-    # os.system('python showGreen.py')
+    print("Connection to Heroku and S3 database working. Response is:")
+    print(response.text)
+
+    os.system('python showGreen.py')
 else:
     print("Error!! No server connection")
-    # os.system('python showRed.py')
+    os.system('python showRed.py')
 
 
 

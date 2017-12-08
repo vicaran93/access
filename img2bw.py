@@ -1,5 +1,5 @@
 from PIL import Image
-import sys,math,ast
+import sys
 import numpy as np
 
 '''
@@ -16,8 +16,7 @@ file_name = sys.argv[1]
 path = path+file_name+".jpg" # assuming jpg extension which is the one that we use when we take a picture
 
 img = Image.open(path)
-#img = Image.open(path)
-#pixels = list(img.getdata())
+img.show()
 
 #green = img[:,:,2]
 rgb_im = img.convert('RGB')
@@ -35,7 +34,7 @@ b=b.point(lambda i: i * 0)
 #green = img
 
 green_img = Image.merge('RGB', (r, g, b))
-#green_img.show()
+green_img.show()
 #new_img = np.zeros(img.shape);
 #new_img[:,:,2] = green
 
@@ -67,7 +66,7 @@ g[ np.where(g > 0) ] = 255;
 
 b_w_img = Image.fromarray(g)
 #b_w_img = Image.merge('RGB', (r, g, b))
-#b_w_img.show()
+b_w_img.show()
 
 bw_img_name=file_name+"_bw.jpg"
 b_w_img.save(save_to+bw_img_name)

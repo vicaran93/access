@@ -8,6 +8,7 @@
 
 
 DATE=$(date  +%Y-%m-%d_%H%M)
+#DATE="template" #Assumes that we store the template in database every time with name template_crop_bw.jpg
 #echo "$DATE"
 #raspistill -vf -o ~/Documents/access/camera/$DATE.jpg
 raspistill -ISO 800 -ss 80000 -br 80 -co 100 -vf -o ~/Documents/access/camera/$DATE.jpg
@@ -21,4 +22,9 @@ python img2bw.py $DATE
 
 DATE+=$'_bw'
 
+# Call add_ID.py  to upload image to the server
+python add_ID.py $DATE
+
 python compare.py $DATE
+
+

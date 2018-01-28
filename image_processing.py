@@ -8,8 +8,8 @@ input should be the name of the file to be converted to BW
 '''
 
 # Path variables
-path="C:/Users/Victor/Documents/UMass Amherst/Fall 2017 (senior)/SDP/images/" #"/home/pi/Documents/access/camera/" # path without image name
-save_to=path# "/home/pi/Documents/access/camera/" #"" for same directory
+path="/home/pi/Documents/access/camera/" #"C:/Users/Victor/Documents/UMass Amherst/Fall 2017 (senior)/SDP/images/" #"/home/pi/Documents/access/camera/" # path without image name
+save_to=path #"/home/pi/Documents/access/camera/" #"" for same directory
 
 # Check input name
 if len(sys.argv) < 2:
@@ -73,5 +73,5 @@ b_w_img_filtered = b_w_img_filtered.filter(ImageFilter.MedianFilter(size=7))
 
 b_w_img_filtered.show()
 
-#bw_img_name=file_name+"_bw.jpg"
-#b_w_img.save(save_to+bw_img_name)
+bw_img_name=file_name+"_bw.jpg"
+b_w_img_filtered.save(save_to+bw_img_name)

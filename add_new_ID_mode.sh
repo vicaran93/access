@@ -21,13 +21,19 @@ python crop.py $DATE
 
 DATE+=$'_cropped'
 
-python img2bw.py $DATE
+#python img2bw.py $DATE
+python image_processing.py $DATE
 
 DATE+=$'_bw'
 
 # Call add_ID.py  to upload image to the server
 python add_ID.py $DATE
 
-#duration=$SECONDS
+# Delete all files 
+rm $DATE #remove black and white image
+DATE=${DATE%???}; # remove last three characters (_bw)
+rm $DATE #remove cropped image
+DATE=${DATE%????????}; # remove last 8  characters (_cropped)
+rm $DATE #remove original image
 
-#echo "Process done in: $(($duration / 60)) minutes and $(($duration % 60)) seconds."
+

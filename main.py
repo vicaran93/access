@@ -29,7 +29,7 @@ while GPIO.input(18) == 0: # Blue button to break while loop
         if once:
             print("First button (PIN4) pressed. Entering 'compare mode' ")
 	    t1 = datetime.now()
-            os.system('./takepic.sh')
+            os.system('./compare_mode.sh')
 	    t2 = datetime.now()
 	    delta = t2 - t1 - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
 	    print("Time taken:"+str(delta.seconds)+" s")
@@ -49,7 +49,7 @@ while GPIO.input(18) == 0: # Blue button to break while loop
                         print("First button (PIN4) pressed. Taking and adding  new ID  picture...")
 			#SECONDS=0
 			t1 = datetime.now()
-                        os.system('./takeIDpic.sh')
+                        os.system('./add_new_ID_mode.sh')
                         #print("Picture was taken") #assuming it was taken correctly (check ways to print a better status e.g. error variables)
 			#duration=$SECONDS
 			#echo "Time taken was: $(($duration / 60)) minutes and $(($duration % 60)) seconds."

@@ -22,10 +22,13 @@ python image_processing.py $DATE
 
 DATE+=$'_bw'
 
-# Call add_ID.py  to upload TEMPLATE to the server
-python add_ID.py $DATE
+python better_template.py $DATE #Hassaan code
 
-#python compare.py $DATE
+DATE='template' # Hassaan's code saves template as  template.jpg
+
+# Call add_ID.py  to upload TEMPLATE to the server
+#python add_ID.py $DATE
+python compare.py $DATE
 
 # Delete all files 
 rm $DATE #remove black and white image

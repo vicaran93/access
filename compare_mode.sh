@@ -24,15 +24,18 @@ DATE+=$'_bw'
 
 python better_template.py $DATE #Hassaan code
 
-DATE='template' # Hassaan's code saves template as  template.jpg
+NAME='template' # Hassaan's code saves template as  template.png
 
-# Call add_ID.py  to upload TEMPLATE to the server
-#python add_ID.py $DATE
-python compare.py $DATE
+# Call add_ID.py  to upload TEMPLATE to the server and then to compare
+python add_ID.py $NAME
+python compare.py $NAME
 
+#DATE+=$'.jpg'
 # Delete all files 
-rm $DATE #remove black and white image
+#rm $DATE #remove black and white image
 DATE=${DATE%???}; # remove last three characters (_bw)
+DATE+=$'.jpg'
 rm $DATE #remove cropped image
-DATE=${DATE%????????}; # remove last 8  characters (_cropped)
+DATE=${DATE%????????????}; # remove last 8+4  characters (_cropped.jpg)
+DATE+=$'.jpg'
 rm $DATE #remove original image

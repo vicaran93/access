@@ -9,8 +9,8 @@ import requests,sys,os
 path="/home/pi/Documents/access/camera/"
 
 if len(sys.argv) == 2:
-    image_name=sys.argv[1]+".png" #"test.jpg" in laptop or "test1_cropped.jpg" in RPi
-    print("Seding: "+image_name)
+    image_name=sys.argv[1]+".jpg" #"test.jpg" in laptop or "test1_cropped.jpg" in RPi
+    print("Sending: "+image_name)
 else:
     print("No input detected in compare.py...using test1.jpg as image name")
     image_name="test1_cropped.jpg" #using test1.jpg does not work due to large image

@@ -10,8 +10,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add_ID.py" afterPath="$PROJECT_DIR$/add_ID.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add_coins.py" afterPath="$PROJECT_DIR$/add_coins.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add_new_ID_mode.sh" afterPath="$PROJECT_DIR$/add_new_ID_mode.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/better_template.py" afterPath="$PROJECT_DIR$/better_template.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/check_img.py" afterPath="$PROJECT_DIR$/check_img.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compare.py" afterPath="$PROJECT_DIR$/compare.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compare_mode.sh" afterPath="$PROJECT_DIR$/compare_mode.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crop.py" afterPath="$PROJECT_DIR$/crop.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image_processing.py" afterPath="$PROJECT_DIR$/image_processing.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img2bw.py" afterPath="$PROJECT_DIR$/img2bw.py" />
@@ -20,8 +24,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rgbTest.py" afterPath="$PROJECT_DIR$/rgbTest.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/showGreen.py" afterPath="$PROJECT_DIR$/showGreen.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/showRed.py" afterPath="$PROJECT_DIR$/showRed.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/takeIDpic.sh" afterPath="$PROJECT_DIR$/takeIDpic.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/takepic.sh" afterPath="$PROJECT_DIR$/takepic.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/takepicNoise.sh" afterPath="$PROJECT_DIR$/takepicNoise.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/takepicTest.sh" afterPath="$PROJECT_DIR$/takepicTest.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
@@ -49,8 +51,8 @@
       <file leaf-file-name="compare.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/compare.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="425">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -59,21 +61,11 @@
       <file leaf-file-name="image_processing.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/image_processing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
+            <state relative-caret-position="266">
               <caret line="63" column="18" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="takepic.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/takepic.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -101,8 +93,8 @@
       <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -182,6 +174,7 @@
         <option value="$PROJECT_DIR$/img2bw.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/image_processing.py" />
       </list>
     </option>
   </component>
@@ -216,7 +209,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -237,6 +229,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -394,9 +387,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18824404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18824404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -424,14 +417,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/takeIDpic.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/takeIDpic.sh" />
     <entry file="file://$PROJECT_DIR$/add_ID.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -477,22 +463,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/takepic.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/takeIDpic.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/takepic.sh" />
+    <entry file="file://$PROJECT_DIR$/takeIDpic.sh" />
     <entry file="file://$PROJECT_DIR$/add_ID.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -526,22 +498,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/takepic.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/takeIDpic.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/takepic.sh" />
+    <entry file="file://$PROJECT_DIR$/takeIDpic.sh" />
     <entry file="file://$PROJECT_DIR$/add_ID.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -566,22 +524,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/takepic.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/takeIDpic.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/takepic.sh" />
+    <entry file="file://$PROJECT_DIR$/takeIDpic.sh" />
     <entry file="file://$PROJECT_DIR$/add_ID.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -606,22 +550,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/takepic.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/takeIDpic.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/takepic.sh" />
+    <entry file="file://$PROJECT_DIR$/takeIDpic.sh" />
     <entry file="file://$PROJECT_DIR$/add_ID.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -638,23 +568,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/takepic.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/takepic.sh" />
     <entry file="file://$PROJECT_DIR$/checkInput.py" />
-    <entry file="file://$PROJECT_DIR$/takepic.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/takepic.sh" />
     <entry file="file://$PROJECT_DIR$/checkInput.py" />
     <entry file="file://$PROJECT_DIR$/checkInput2.py" />
     <entry file="file://$PROJECT_DIR$/checkInput2.py" />
@@ -675,14 +591,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/takeIDpic.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/takeIDpic.sh" />
     <entry file="file://$PROJECT_DIR$/test_server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -721,8 +630,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -737,14 +646,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/takepic.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/takepic.sh" />
     <entry file="file://$PROJECT_DIR$/crop.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -755,15 +657,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/compare.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="425">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/image_processing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
+        <state relative-caret-position="266">
           <caret line="63" column="18" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />

@@ -30,24 +30,25 @@ r, g, b = rgb_im.split()
 # Filter Green and Blue channels  -------------
 #Green
 # Matlab: ave_green = mean(mean(green));
-ave_green =np.mean(g);
+ave_green =np.mean(g)*1.7;
 
 # Matlab: green(green < ave_green) = 0;
 g = np.array(g)
 g[np.where(g < ave_green)] = 0
 
 #Blue
-ave_blue =np.mean(b);
-b2 = np.array(b)
-b2[np.where(b2 < ave_blue)] = 0
+#ave_blue =np.mean(b);
+#b2 = np.array(b)
+#b2[np.where(b2 < ave_blue)] = 0
 
 #New Green Channel (less error)
-newGreen=np.abs(g-b2*0.7)
+##newGreen=np.abs(g-b2*0.7)
 # Matlab: newGreen1(new_img < 0.25) = 0;
-newGreen[np.where(newGreen < 0.25*255)] = 0
+##newGreen[np.where(newGreen < 0.25*255)] = 0
 
 
-newGreen = Image.fromarray(newGreen).convert('L') # to be able to merge r,g,b "need to convert each channel into a luminosity channel"
+##newGreen = Image.fromarray(newGreen).convert('L') # to be able to merge r,g,b "need to convert each channel into a luminosity channel"
+newGreen = Image.fromarray(g).convert('L') # to be able to merge r,g,b "need to convert each channel into a luminosity channel"
 
 # Deleting Red and Blue channels
 r=r.point(lambda i: i * 0)

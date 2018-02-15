@@ -10,7 +10,7 @@
 DATE=$(date  +%Y-%m-%d_%H%M)
 #DATE="template" #Assumes that we store the template in database every time with name template_crop_bw.jpg
 #raspistill -vf -o ~/Documents/access/camera/$DATE.jpg
-raspistill -ISO 800 -ss 80000 -br 80 -co 100 -vf -o ~/Documents/access/camera/$DATE.jpg
+raspistill -ISO 400 -ss 160000 -br 80 -co 100 -vf -o ~/Documents/access/camera/$DATE.jpg
 
 # Call crop.py  to crop image that we just took
 python crop.py $DATE
@@ -35,7 +35,7 @@ python compare.py $NAME
 #rm $DATE #remove black and white image
 DATE=${DATE%???}; # remove last three characters (_bw)
 DATE+=$'.jpg'
-rm $DATE #remove cropped image
+#rm $DATE #remove cropped image
 DATE=${DATE%????????????}; # remove last 8+4  characters (_cropped.jpg)
 DATE+=$'.jpg'
-rm $DATE #remove original image
+#rm $DATE #remove original image

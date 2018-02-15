@@ -9,7 +9,7 @@
 DATE=$(date  +%Y-%m-%d_%H%M)
 echo "Picture name: $DATE"
 #raspistill -vf -q 100 -o ~/Documents/access/camera/$DATE.jpg
-raspistill -ISO 800 -ss 80000 -br 80 -co 100 -vf -o ~/Documents/access/camera/$DATE.jpg
+raspistill -ISO 400 -ss 160000 -br 80 -co 100 -vf -o ~/Documents/access/camera/$DATE.jpg
 #2017-12-01_1842
 
 # Call crop.py  to crop image that we just took
@@ -30,10 +30,10 @@ DATE+=$'_bw'
 python add_ID.py $DATE
 
 # Delete all files 
-rm $DATE #remove black and white image
+#rm $DATE #remove black and white image
 DATE=${DATE%???}; # remove last three characters (_bw)
-rm $DATE #remove cropped image
+#rm $DATE #remove cropped image
 DATE=${DATE%????????}; # remove last 8  characters (_cropped)
-rm $DATE #remove original image
+#rm $DATE #remove original image
 
 

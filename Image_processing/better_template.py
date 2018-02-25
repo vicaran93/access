@@ -72,7 +72,9 @@ def main():
     template.save(path+"template.jpg")
     
 if __name__ == "__main__":
+    print("------------------------ Choosing Template ------------------------")
     main()
+    print("------------------------ Done ------------------------")
 
 
 

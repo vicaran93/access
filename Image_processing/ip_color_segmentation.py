@@ -68,11 +68,12 @@ if len(sys.argv) < 2:
 
 
 file_name = sys.argv[1]
+print(" -> Color segmentation (RGB to BW): "+file_name)
 
 # Load image:
 path = path+file_name+".jpg" # assuming jpg extension which is the one that we use when we take a picture
-
 img = Image.open(path)
+
 #img.show()
 
 #m = [255*0.14412,255*0.707508,255*0.115358]
@@ -87,3 +88,4 @@ I = Image.fromarray(I).convert('L')
 
 bw_img_name=file_name+"_bw.jpg"
 I.save(save_to+bw_img_name)
+print("------------------------ Done ------------------------")

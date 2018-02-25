@@ -26,11 +26,14 @@ with open(final_path, 'rb') as f: response = requests.post(final_url, files={'us
 
 print("\nSERVER RESPONSE:\n"+response.text) #TEXT/HTML
 if response.text[0] == "I": # Image received...
-    print("We got response back.Run test.py and show green LED!")
+    print("------------------------ Entering Compare Mode ------------------------")
+    #print("We got response back.Run test.py and show green LED!")
     #os.system('python test.py %s' % response.text);
     #os.system('%s %s' % ('ls', '-l'))
     #os.system('python showGreen.py')
 elif response.text[0] == "E": # Eror detected...
     print("We got an error as a response. Show red LED!")
     os.system('python showRed.py')
+print("--> Response:")
 print(response.status_code, response.reason) #HTTP
+print("------------------------ Done ------------------------")

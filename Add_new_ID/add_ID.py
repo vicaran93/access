@@ -23,10 +23,13 @@ final_url=base_url+"/upload.php" #php code created to upload image in POST reque
 with open(final_path, 'rb') as f: response = requests.post(final_url, files={'userfile': f})
 
 width, height = img.size
-print("Size of image sent is (wxh): "+ str(width)+" by "+str(height))
+#print("Size of image sent is (wxh): "+ str(width)+" by "+str(height))
+print("------------------------ Send Image: " +image_name+" ------------------------")
+print("--> Response:")
 print(response.text) #TEXT/HTML
 if response.text == "Upload successful":
-    print("We got response back. File is uploaded!")
+    print("------------------------ Done uploading: " + image_name + " ------------------------")
+    # print("We got response back. File is uploaded!")
     #show green LED
     #os.system('python ../LEDs/showGreen.py') # if commented out, decrease delta time in main.py by 10 sec (line 34)
 elif  response.text == "Upload error":

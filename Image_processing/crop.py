@@ -69,7 +69,8 @@ else:
 
 
 # Verify cropping coordinates
-
+print("------------------------ Image Processing ------------------------")
+print(" -> Cropping image: "+file_name)
 x_i = math.ceil(xy[0] - width/2)
 if x_i < 0: x_i=0
 y_i = math.ceil(xy[1] - height/2)
@@ -90,3 +91,5 @@ img2 = img.crop(
 #img2 = img.crop((0, 0, xSize/2, ySize/2))
 cropped_img_name=file_name+"_cropped.jpg"
 img2.save(save_to+cropped_img_name)
+
+

@@ -28,9 +28,10 @@ def blinkOnce(pin):
 	print("UV LED off and Img taken")
 	return
 
+print("------------------------ Taking Image ------------------------")
 for i in range(0,1):
 	blinkOnce(21)
-	
+print("------------------------ Done ------------------------")
 
 GPIO.cleanup()
 

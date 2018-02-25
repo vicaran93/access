@@ -28,7 +28,7 @@ print("------------------------ Send Image: " +image_name+" --------------------
 print("--> Response:")
 print(response.text) #TEXT/HTML
 if response.text == "Upload successful":
-    print("------------------------ Done uploading: " + image_name + " ------------------------")
+    pass
     # print("We got response back. File is uploaded!")
     #show green LED
     #os.system('python ../LEDs/showGreen.py') # if commented out, decrease delta time in main.py by 10 sec (line 34)
@@ -39,3 +39,4 @@ elif  response.text == "Upload error":
 else: print("No response detected")
 
 print(response.status_code, response.reason) #HTTP
+print("------------------------ Done uploading: " + image_name + " ------------------------")

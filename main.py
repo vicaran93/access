@@ -54,7 +54,7 @@ while GPIO.input(18) == 0: # Blue button to break while loop
 			#duration=$SECONDS
 			#echo "Time taken was: $(($duration / 60)) minutes and $(($duration % 60)) seconds."
 			t2 = datetime.now()
-			delta = t2 - t1 - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
+			delta = t2 - t1 # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
 			print("Time taken:"+str(delta.seconds)+" s")
                         once = False
                         flag = 0

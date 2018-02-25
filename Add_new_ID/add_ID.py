@@ -28,11 +28,11 @@ print(response.text) #TEXT/HTML
 if response.text == "Upload successful":
     print("We got response back. File is uploaded!")
     #show green LED
-    #os.system('python showGreen.py')
+    #os.system('python ../LEDs/showGreen.py') # if commented out, decrease delta time in main.py by 10 sec (line 34)
 elif  response.text == "Upload error":
     print("Upload error detected")
     #show red LED
-    os.system('python showRed.py')
-else: print("No reponse detected")
+    os.system('python ../LEDs/showRed.py')
+else: print("No response detected")
 
 print(response.status_code, response.reason) #HTTP

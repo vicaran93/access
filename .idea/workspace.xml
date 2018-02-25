@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46b778e6-1966-45fe-9548-75ad97d0a50b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Distance_sensor/get_distance.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/access.iml" afterPath="$PROJECT_DIR$/.idea/access.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
@@ -10,27 +9,28 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add_ID.py" afterPath="$PROJECT_DIR$/add_ID.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add_coins.py" afterPath="$PROJECT_DIR$/add_coins.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add_new_ID_mode.sh" afterPath="$PROJECT_DIR$/add_new_ID_mode.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/better_template.py" afterPath="$PROJECT_DIR$/better_template.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/check_img.py" afterPath="$PROJECT_DIR$/check_img.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compare.py" afterPath="$PROJECT_DIR$/compare.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compare_mode.sh" afterPath="$PROJECT_DIR$/compare_mode.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crop.py" afterPath="$PROJECT_DIR$/crop.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image_processing.py" afterPath="$PROJECT_DIR$/image_processing.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img2bw.py" afterPath="$PROJECT_DIR$/img2bw.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ip_color_segmentation.py" afterPath="$PROJECT_DIR$/ip_color_segmentation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Add_new_ID/add_ID.py" afterPath="$PROJECT_DIR$/Add_new_ID/add_ID.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Add_new_ID/add_coins.py" afterPath="$PROJECT_DIR$/Add_new_ID/add_coins.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Add_new_ID/add_new_ID_mode.sh" afterPath="$PROJECT_DIR$/Add_new_ID/add_new_ID_mode.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Compare_ID/compare.py" afterPath="$PROJECT_DIR$/Compare_ID/compare.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Compare_ID/compare_mode.sh" afterPath="$PROJECT_DIR$/Compare_ID/compare_mode.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Distance_sensor/get_distance.py" afterPath="$PROJECT_DIR$/Distance_sensor/get_distance.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Image_processing/better_template.py" afterPath="$PROJECT_DIR$/Image_processing/better_template.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Image_processing/crop.py" afterPath="$PROJECT_DIR$/Image_processing/crop.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Image_processing/image_processing.py" afterPath="$PROJECT_DIR$/Image_processing/image_processing.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Image_processing/img2bw.py" afterPath="$PROJECT_DIR$/Image_processing/img2bw.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Image_processing/ip_color_segmentation.py" afterPath="$PROJECT_DIR$/Image_processing/ip_color_segmentation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Image_processing/rgbTest.py" afterPath="$PROJECT_DIR$/Image_processing/rgbTest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LEDs/LED_and_pic.py" afterPath="$PROJECT_DIR$/LEDs/LED_and_pic.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LEDs/showGreen.py" afterPath="$PROJECT_DIR$/LEDs/showGreen.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LEDs/showRed.py" afterPath="$PROJECT_DIR$/LEDs/showRed.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/check_img.py" afterPath="$PROJECT_DIR$/Tests/check_img.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/takepicNoise.sh" afterPath="$PROJECT_DIR$/Tests/takepicNoise.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/takepicTest.sh" afterPath="$PROJECT_DIR$/Tests/takepicTest.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/test_camera.sh" afterPath="$PROJECT_DIR$/Tests/test_camera.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/test_server.py" afterPath="$PROJECT_DIR$/Tests/test_server.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rgbTest.py" afterPath="$PROJECT_DIR$/rgbTest.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/showGreen.py" afterPath="$PROJECT_DIR$/showGreen.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/showRed.py" afterPath="$PROJECT_DIR$/showRed.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/takepicNoise.sh" afterPath="$PROJECT_DIR$/takepicNoise.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/takepicTest.sh" afterPath="$PROJECT_DIR$/takepicTest.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_camera.sh" afterPath="$PROJECT_DIR$/test_camera.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_server.py" afterPath="$PROJECT_DIR$/test_server.py" />
     </list>
     <ignored path="access.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,56 +50,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="compare.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/compare.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="image_processing.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/image_processing.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="get_distance.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="get_distance.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Distance_sensor/get_distance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+            <state relative-caret-position="249">
+              <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
               <folding>
                 <element signature="e#97#120#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="crop.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crop.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="31" column="10" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -114,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+            <state relative-caret-position="1428">
+              <caret line="84" column="34" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="34" />
               <folding>
                 <element signature="e#18#41#0" expanded="true" />
               </folding>
@@ -127,10 +85,10 @@
         </entry>
       </file>
       <file leaf-file-name="test_server.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_server.py">
+        <entry file="file://$PROJECT_DIR$/Tests/test_server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+            <state relative-caret-position="85">
+              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -138,24 +96,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_camera.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_camera.sh">
+      <file leaf-file-name="compare_mode.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Compare_ID/compare_mode.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="87" selection-start-line="11" selection-start-column="87" selection-end-line="11" selection-end-column="87" />
+            <state relative-caret-position="242">
+              <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="img2bw.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/img2bw.py">
+      <file leaf-file-name="add_ID.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Add_new_ID/add_ID.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+            <state relative-caret-position="204">
+              <caret line="30" column="116" selection-start-line="30" selection-start-column="116" selection-end-line="30" selection-end-column="116" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LED_and_pic.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LEDs/LED_and_pic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -190,6 +158,11 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/image_processing.py" />
         <option value="$PROJECT_DIR$/Distance_sensor/get_distance.py" />
+        <option value="$PROJECT_DIR$/Compare_ID/compare_mode.sh" />
+        <option value="$PROJECT_DIR$/LEDs/LED_and_pic.py" />
+        <option value="$PROJECT_DIR$/Add_new_ID/add_ID.py" />
+        <option value="$PROJECT_DIR$/Tests/test_camera.sh" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -239,20 +212,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="access" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="access" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="access" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Distance_sensor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -427,15 +386,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18824404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18898809" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27986908" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -457,51 +416,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/add_ID.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="e#18#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_camera.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="87" selection-start-line="11" selection-start-column="87" selection-end-line="11" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img2bw.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/takepic.sh" />
     <entry file="file://$PROJECT_DIR$/takeIDpic.sh" />
     <entry file="file://$PROJECT_DIR$/add_ID.py">
@@ -523,9 +437,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1139">
           <caret line="67" column="28" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -635,9 +547,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -653,9 +563,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -672,16 +580,6 @@
         <state relative-caret-position="17">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-          <folding>
-            <element signature="e#18#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -706,18 +604,70 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Distance_sensor/get_distance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+        <state relative-caret-position="249">
+          <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
           <folding>
             <element signature="e#97#120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LEDs/LED_and_pic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Add_new_ID/add_ID.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="30" column="116" selection-start-line="30" selection-start-column="116" selection-end-line="30" selection-end-column="116" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Compare_ID/compare_mode.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/test_camera.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/test_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="84" column="34" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="34" />
+          <folding>
+            <element signature="e#18#41#0" expanded="true" />
           </folding>
         </state>
       </provider>

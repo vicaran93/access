@@ -10,4 +10,4 @@
 DATE=$(date  +%Y-%m-%d_%H%M)
 #raspistill -vf -o ~/Documents/access/camera/$DATE.jpg
 raspistill -ISO 800 -ss 80000 -br 80 -co 100 -vf -o ~/Documents/access/camera/$DATE.jpg
-python check_img.py $DATE
+python ../Tests/check_img.py $DATE

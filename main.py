@@ -29,9 +29,9 @@ while GPIO.input(18) == 0: # Blue button to break while loop
         if once:
             print("First button (PIN4) pressed. Entering 'compare mode' ")
 	    t1 = datetime.now()
-            os.system('./compare_mode.sh')
+            os.system('./Compare_ID/compare_mode.sh')
 	    t2 = datetime.now()
-	    delta = t2 - t1 - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
+	    delta = t2 - t1 # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
 	    print("Time taken:"+str(delta.seconds)+" s")
 
             once = False
@@ -49,7 +49,7 @@ while GPIO.input(18) == 0: # Blue button to break while loop
                         print("First button (PIN4) pressed. Taking and adding  new ID  picture...")
 			#SECONDS=0
 			t1 = datetime.now()
-                        os.system('./add_new_ID_mode.sh')
+                        os.system('../Add_new_ID/add_new_ID_mode.sh')
                         #print("Picture was taken") #assuming it was taken correctly (check ways to print a better status e.g. error variables)
 			#duration=$SECONDS
 			#echo "Time taken was: $(($duration / 60)) minutes and $(($duration % 60)) seconds."
@@ -73,7 +73,7 @@ while GPIO.input(18) == 0: # Blue button to break while loop
     if GPIO.input(23) == 1: # test camera
 	if once:
             print("Test: Camera (PIN23)")
-	    os.system('./test_camera.sh')
+	    os.system('../Tests/test_camera.sh')
 
             once = False
             flag = 0
@@ -82,7 +82,7 @@ while GPIO.input(18) == 0: # Blue button to break while loop
     if GPIO.input(24) == 1: # test server
 	if once:
             print("Test: Server Connection (PIN24)")
-	    os.system('python test_server.py')
+	    os.system('python ../Tests/test_server.py')
 
             once = False
             flag = 0

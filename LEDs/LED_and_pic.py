@@ -19,13 +19,15 @@ file_name = file_name+".jpg"
 
 def blinkOnce(pin):
 	GPIO.output(pin,True)
+	print("UV LED on!")
 	#time.sleep(10) #0.5
 	temp ="raspistill -ISO 400 -ss 160000 -br 80 -co 100 -vf -o ~/Documents/access/camera/"+file_name 
         os.system(temp)
 	GPIO.output(pin,False)
 	#time.sleep(0.5)
+	print("UV LED off and Img taken")
 	return
-print("Green LED on! (10s)")
+
 for i in range(0,1):
 	blinkOnce(21)
 	

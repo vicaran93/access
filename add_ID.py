@@ -28,7 +28,7 @@ print(response.text) #TEXT/HTML
 if response.text == "Upload successful":
     print("We got response back. File is uploaded!")
     #show green LED
-    os.system('python showGreen.py')
+    #os.system('python showGreen.py')
 elif  response.text == "Upload error":
     print("Upload error detected")
     #show red LED

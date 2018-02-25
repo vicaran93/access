@@ -9,8 +9,16 @@
 
 DATE=$(date  +%Y-%m-%d_%H%M)
 #DATE="template" #Assumes that we store the template in database every time with name template_crop_bw.jpg
+
+#turn on UV LEDs
+#echo "21" > /sys/class/gpio/export
+#echo "out" > /sys/class/gpio/gpio21/direction
+#echo "1" > /sys/class/gpio/gpio21/value
 #raspistill -vf -o ~/Documents/access/camera/$DATE.jpg
-raspistill -ISO 400 -ss 160000 -br 80 -co 100 -vf -o ~/Documents/access/camera/$DATE.jpg
+python LED_and_pic.py $DATE
+#raspistill -ISO 400 -ss 160000 -br 80 -co 100 -vf -o ~/Documents/access/camera/$DATE.jpg
+#turn off UV LEDs
+#echo "21" > /sys/class/gpio/unexport
 
 # Call crop.py  to crop image that we just took
 python crop.py $DATE
@@ -18,7 +26,8 @@ python crop.py $DATE
 DATE+=$'_cropped'
 
 #python img2bw.py $DATE # This does not deal with the artifacts encountered in the imgs
-python image_processing.py $DATE
+#python image_processing.py $DATE
+python ip_color_segmentation.py $DATE
 
 DATE+=$'_bw'
 

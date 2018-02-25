@@ -29,7 +29,7 @@ if response.text[0] == "I": # Image received...
     print("We got response back.Run test.py and show green LED!")
     #os.system('python test.py %s' % response.text);
     #os.system('%s %s' % ('ls', '-l'))
-    os.system('python showGreen.py')
+    #os.system('python showGreen.py')
 elif response.text[0] == "E": # Eror detected...
     print("We got an error as a response. Show red LED!")
     os.system('python showRed.py')

@@ -9,8 +9,10 @@
 DATE=$(date  +%Y-%m-%d_%H%M)
 echo "Picture name: $DATE"
 #raspistill -vf -q 100 -o ~/Documents/access/camera/$DATE.jpg
-raspistill -ISO 400 -ss 160000 -br 80 -co 100 -vf -o ~/Documents/access/camera/$DATE.jpg
-#2017-12-01_1842
+#raspistill -ISO 400 -ss 160000 -br 80 -co 100 -vf -o ~/Documents/access/camera/$DATE.jpg
+python LED_and_pic.py $DATE
+
+
 
 # Call crop.py  to crop image that we just took
 python crop.py $DATE
@@ -22,7 +24,8 @@ python crop.py $DATE
 DATE+=$'_cropped'
 
 #python img2bw.py $DATE
-python image_processing.py $DATE
+#python image_processing.py $DATE
+python ip_color_segmentation.py $DATE
 
 DATE+=$'_bw'
 

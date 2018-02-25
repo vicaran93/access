@@ -7,10 +7,10 @@ import requests,sys,os
 
 # Path variables
 path="/home/pi/Documents/access/camera/"
-
+print("------------------------ Entering Compare Mode ------------------------")
 if len(sys.argv) == 2:
     image_name=sys.argv[1]+".jpg" #"test.jpg" in laptop or "test1_cropped.jpg" in RPi
-    print("Sending: "+image_name)
+    print("--> Comparing...")
 else:
     print("No input detected in compare.py...using test1.jpg as image name")
     image_name="test1_cropped.jpg" #using test1.jpg does not work due to large image
@@ -24,9 +24,9 @@ final_url=base_url+"/compare.php"
 
 with open(final_path, 'rb') as f: response = requests.post(final_url, files={'userfile': f})
 
-print("\nSERVER RESPONSE:\n"+response.text) #TEXT/HTML
+print("\n--> SERVER RESPONSE:\n"+response.text) #TEXT/HTML
 if response.text[0] == "I": # Image received...
-    print("------------------------ Entering Compare Mode ------------------------")
+    pass
     #print("We got response back.Run test.py and show green LED!")
     #os.system('python test.py %s' % response.text);
     #os.system('%s %s' % ('ls', '-l'))
@@ -34,6 +34,5 @@ if response.text[0] == "I": # Image received...
 elif response.text[0] == "E": # Eror detected...
     print("We got an error as a response. Show red LED!")
     os.system('python showRed.py')
-print("--> Response:")
 print(response.status_code, response.reason) #HTTP
 print("------------------------ Done ------------------------")

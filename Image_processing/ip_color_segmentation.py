@@ -5,56 +5,46 @@ import numpy as np
 import math
 
 def colorSeg(f, m, T):
+    '''
+    Using Numpy and vectorizing 3D distance equation
 
-    f = np.array(f)
-    #print(f.shape)
-    xsize = f.shape[0]
-    ysize = f.shape[1]
+    :param f: Image in obtained from  Image.open(path)
+    :param m: vector of size 3 having mean values for R G B.
+    :param T: Threshold or radious of the sphere in the RGB space
+    :return: Returns matrix I for BW img --> Usin
+    '''
 
-    I = np.zeros((xsize, ysize))
-    #f = double(f);
-    ar = m[0];
-    ag = m[1];
-    ab = m[2];
-    b = np.array((ar, ag, ab))
 
-    # RGB limits
-    R_lower = ar-T
-    R_upper = ar+T
-    G_lower = ag - T
-    G_upper = ag + T
-    B_lower = ab - T
-    B_upper = ab + T
+    rgb_im = f.convert('RGB')
+    r, g, b = rgb_im.split()
 
-    #max_x = 0;
-    #min_X = 1000000000;
+    # Average R G B values on the spheres
+    ar = m[0]
+    ag = m[1]
+    ab = m[2]
 
-    for i in range(xsize):
+    # Converting to Numpy arrays
+    r = np.array(r)
+    g = np.array(g)
+    b = np.array(b)
 
-        for j in range(ysize):
+    # From distance equation D = sqrt(math.pow((zr - ar) , 2) + math.pow((zg - ag),2) + math.pow((zb - ab),2)) in a vectorized version
+    # (r - ar)^2  (g - ag)^2  (b - ab)^2
+    I = pow((r - ar),2)
+    A = pow((g - ag),2)
+    B = pow((b - ab),2)
+    C = pow(T,2) - A - B
+    # now we can use the inequality equation derived from the 3d distance eq and say that I < C to bei n the sphere
 
-            zr = np.array(f[i, j, 0])
-            zg = np.array(f[i, j, 1])
-            zb = np.array(f[i, j, 2])
-            #a = np.array((zr ,zg, zb))
-	    
-  	    if (R_lower <= zr and zr <= R_upper) and (G_lower <= zg and zg <= G_upper) and (B_lower <= zb and zb <= B_upper):
-		I[i, j] = 255;
-		
+    # create zeros matrix
+    rows = r.shape[0]
+    cols = r.shape[1]
+    g = np.zeros((rows, cols))
 
-            #D = math.sqrt(math.pow((zr - ar) , 2) + math.pow((zg - ag),2) + math.pow((zb - ab),2))
-	    #D = np.linalg.norm(a-b)
-            # distances = [distances D];
-            #if max_x < D:
-            #    max_x = D;
+    # Assign white pixels to pixels within threshold
+    g[np.where(I < C)] = 255
 
-            #if min_X > D:
-            #    min_X = D;
-
-            #if D < T:
-            #    I[i, j] = 255;
-
-    return I
+    return g
 
 
 # Path variables

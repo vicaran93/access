@@ -15,10 +15,10 @@ if (len(sys.argv) == 2): #one input: the name of file to be checked
     if exists == True:
         #show green LED
         print("Image file exists!")
-        os.system('python showGreen.py')
+        os.system('python ./LEDs/showGreen.py')
     else:
         print("Image file was not detected! Error")
-        os.system('python showRed.py')
+        os.system('python ./LEDs/showRed.py')
 
 else:
     print("Wrong input parameters! Cannot check if image file exists.")

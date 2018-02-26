@@ -7,7 +7,7 @@ This script blinks green light 10 times using pin 12
 
 #initialize the GPIO
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(21,GPIO.OUT) #12
+GPIO.setup(12,GPIO.OUT) 
 
 def blinkOnce(pin):
 	GPIO.output(pin,True)
@@ -17,6 +17,6 @@ def blinkOnce(pin):
 	return
 print("Green LED on! (10s)")
 for i in range(0,1):
-	blinkOnce(21) #12
+	blinkOnce(12) 
 
 GPIO.cleanup()

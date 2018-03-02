@@ -44,37 +44,39 @@ def grid_image_template(im):
     #print grid_max, highest_score
     
     if grid_max < 4:
+        cent = (wid_of_grid/2, (len_of_grid*grid_max+len_of_grid*(grid_max+1))/2)
         temp_im = im[0:wid_of_grid, len_of_grid*grid_max:len_of_grid*(grid_max+1)]
     else: #second row
+        cent = ((wid_of_grid+row)/2, (len_of_grid*(grid_max%4)+len_of_grid*((grid_max+1)%4))/2)
         temp_im = im[wid_of_grid:row, len_of_grid*(grid_max%4):len_of_grid*((grid_max+1)%4)]
     
-    return temp_im
+    return temp_im, cent
     
 def main():
     # Path variables
     path="/home/pi/Documents/access/camera/"
-    
+
     if len(sys.argv) == 2:
         image_name = sys.argv[1]+".jpg" 
         print("Sending: "+image_name)
     else:
         print("No input detected in better_template.py...")
         sys.exit()
-
+    
     path_to_image = path+image_name
-    #path_to_image = "C:\Users\Hassaan\Desktop\School related\Fall 2017\SDP/test1_bw.jpg"
     im = read_image(path_to_image)
-    template = grid_image_template(np.array(im))
+    template, cent = grid_image_template(np.array(im))
     
     #print template.shape[0], template.shape[1]
     template = Image.fromarray(template)
-    #template.show()
     template.save(path+"template.jpg")
     
+    with open('/home/pi/Documents/access/camera/location.txt' ,'w') as my_file:
+        my_file.write('%d %d\n'%(cent[0], cent[1]))
+        my_file.write("template.jpg")
+    
 if __name__ == "__main__":
-    print("------------------------ Choosing Template ------------------------")
     main()
-    print("------------------------ Done ------------------------")
 
 
 

@@ -10,15 +10,7 @@
 DATE=$(date  +%Y-%m-%d_%H%M)
 #DATE="template" #Assumes that we store the template in database every time with name template_crop_bw.jpg
 
-#turn on UV LEDs
-#echo "21" > /sys/class/gpio/export
-#echo "out" > /sys/class/gpio/gpio21/direction
-#echo "1" > /sys/class/gpio/gpio21/value
-#raspistill -vf -o ~/Documents/access/camera/$DATE.jpg
 python ./LEDs/LED_and_pic.py $DATE # From location of main.py
-#raspistill -ISO 400 -ss 160000 -br 80 -co 100 -vf -o ~/Documents/access/camera/$DATE.jpg
-#turn off UV LEDs
-#echo "21" > /sys/class/gpio/unexport
 
 # Call crop.py  to crop image that we just took
 python ./Image_processing/crop.py $DATE
@@ -32,6 +24,8 @@ python ./Image_processing/ip_color_segmentation.py $DATE
 DATE+=$'_bw'
 
 python ./Image_processing/better_template.py $DATE #Hassaan code
+
+python ./Add_new_ID/add_coordinates.py 'location.txt' #assumming Hassaan's code creates this file
 
 NAME='template' # Hassaan's code saves template taken from $DATE as  template.png
 

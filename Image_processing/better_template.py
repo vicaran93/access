@@ -73,7 +73,6 @@ def main():
     
     with open('/home/pi/Documents/access/camera/location.txt' ,'w') as my_file:
         my_file.write('%d %d\n'%(cent[0], cent[1]))
-        my_file.write("template.jpg")
     
 if __name__ == "__main__":
     main()

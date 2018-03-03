@@ -31,7 +31,7 @@ DATE+=$'_bw'
 
 # Call add_ID.py  to upload image to the server
 #python ./Add_new_ID/add_ID.py $DATE
-python ./Add_new_ID/upload_RPi.py
+python ./Add_new_ID/upload_RPi.py $DATE
 
 # Delete all files 
 #rm $DATE #remove black and white image

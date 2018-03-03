@@ -30,7 +30,8 @@ python ./Add_new_ID/add_coordinates.py 'location.txt' #assumming Hassaan's code 
 NAME='template' # Hassaan's code saves template taken from $DATE as  template.png
 
 # Call add_ID.py  to upload TEMPLATE to the server and then to compare
-python ./Add_new_ID/add_ID.py $NAME
+#python ./Add_new_ID/add_ID.py $NAME  # uploading through Heroku
+python ./Add_new_ID/upload_RPi.py $NAME  # uploading through RPi
 python ./Compare_ID/compare.py $NAME
 
 # DELETE IMAGES IN RPi

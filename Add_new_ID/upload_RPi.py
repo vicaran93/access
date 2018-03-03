@@ -23,14 +23,14 @@ if len(sys.argv) != 2:
 file_name = sys.argv[1]
 file_path = path+file_name+".jpg" # assuming jpg extension which is the one that we use when we take a picture
 
-print("------------------------ Send Image from RPi: " +file_name+".jpg ------------------------")
+print("------- Send Image from RPi: " +file_name+".jpg ------------")
 print("...")
 
 # Get Environment variables
 aws_access_key = os.environ['AWS_ACCESS_KEY_ID']
 aws_secret_key = os.environ['AWS_SECRET_ACCESS_KEY']
 aws_s3_bucket_name = os.environ['BUCKET']
-print(aws_s3_bucket_name) # check
+#print(aws_s3_bucket_name) # check
 # Authenticate connection
 conn = boto.connect_s3(aws_access_key, aws_secret_key)
 # Get Bucket
@@ -49,6 +49,7 @@ except botocore.exceptions.ClientError as e:
 # Bucket is opened. Now we can upload file to Bucket
 
 # Upload image:
+file_name = file_name+".jpg"
 s3 = boto3.client('s3')
 with open(file_path, 'rb') as data:
     s3.upload_file(

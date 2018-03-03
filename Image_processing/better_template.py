@@ -55,10 +55,10 @@ def grid_image_template(im):
 def main():
     # Path variables
     path="/home/pi/Documents/access/camera/"
-
+    print("------------------------ Obtaining Best Template ------------------------")
     if len(sys.argv) == 2:
         image_name = sys.argv[1]+".jpg" 
-        print("Sending: "+image_name)
+        print("--> Obtaining template from: "+image_name)
     else:
         print("No input detected in better_template.py...")
         sys.exit()
@@ -73,6 +73,8 @@ def main():
     
     with open('/home/pi/Documents/access/camera/location.txt','w') as my_file:
         my_file.write('%d %d\n'%(cent[0], cent[1]))
+
+    print("------------------------ Done ------------------------")
     
 if __name__ == "__main__":
     main()

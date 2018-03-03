@@ -71,7 +71,7 @@ def main():
     template = Image.fromarray(template)
     template.save(path+"template.jpg")
     
-    with open('/home/pi/Documents/access/camera/location.txt' ,'w') as my_file:
+    with open('/home/pi/Documents/access/camera/%d_%d.txt'%(cent[0],cent[1]) ,'w') as my_file:
         my_file.write('%d %d\n'%(cent[0], cent[1]))
     
 if __name__ == "__main__":

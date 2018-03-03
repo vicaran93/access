@@ -30,7 +30,8 @@ python ./Image_processing/ip_color_segmentation.py $DATE
 DATE+=$'_bw'
 
 # Call add_ID.py  to upload image to the server
-python ./Add_new_ID/add_ID.py $DATE
+#python ./Add_new_ID/add_ID.py $DATE
+python ./Add_new_ID/upload_RPi.py
 
 # Delete all files 
 #rm $DATE #remove black and white image

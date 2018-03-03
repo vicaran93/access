@@ -11,6 +11,8 @@ import boto3
     Three environment variables must be setup accordingly:  AWS_ACCESS_KEY_ID  AWS_SECRET_ACCESS_KEY BUCKET
 
 '''
+
+
 # Check correct amount of inputs:
 path="/home/pi/Documents/access/camera/"#"C:/Users/Victor/Documents/UMass Amherst/Fall 2017 (senior)/SDP/images/"  # path without image name
 # Check input name
@@ -21,6 +23,8 @@ if len(sys.argv) != 2:
 file_name = sys.argv[1]
 file_path = path+file_name+".jpg" # assuming jpg extension which is the one that we use when we take a picture
 
+print("------------------------ Send Image from RPi: " +file_name+".jpg ------------------------")
+print("...")
 
 # Get Environment variables
 aws_access_key = os.environ['AWS_ACCESS_KEY_ID']
@@ -42,17 +46,17 @@ except botocore.exceptions.ClientError as e:
     if error_code == 404:
         exists = False
 
-# Bucket is opened. Now we can uload file to Bucket
-#file_path ='2018-01-27_1251_cropped_bw.jpg'
-image_name = 'T2.jpg'
-# data = open('2018-01-27_1251_cropped_bw.jpg', 'rb')
+# Bucket is opened. Now we can upload file to Bucket
+
 # Upload image:
 s3 = boto3.client('s3')
 with open(file_path, 'rb') as data:
     s3.upload_file(
-        file_path, aws_s3_bucket_name, image_name,
+        file_path, aws_s3_bucket_name, file_name,
         ExtraArgs={'ACL': 'public-read'}
     )
+
+print("------------------------ Done uploading: ------------------------")
 
 
 

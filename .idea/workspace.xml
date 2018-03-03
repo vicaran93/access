@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46b778e6-1966-45fe-9548-75ad97d0a50b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Add_new_ID/upload_RPi.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/access.iml" afterPath="$PROJECT_DIR$/.idea/access.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
@@ -13,6 +12,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Add_new_ID/add_ID.py" afterPath="$PROJECT_DIR$/Add_new_ID/add_ID.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Add_new_ID/add_coins.py" afterPath="$PROJECT_DIR$/Add_new_ID/add_coins.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Add_new_ID/add_new_ID_mode.sh" afterPath="$PROJECT_DIR$/Add_new_ID/add_new_ID_mode.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Add_new_ID/upload_RPi.py" afterPath="$PROJECT_DIR$/Add_new_ID/upload_RPi.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Compare_ID/compare.py" afterPath="$PROJECT_DIR$/Compare_ID/compare.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Compare_ID/compare_mode.sh" afterPath="$PROJECT_DIR$/Compare_ID/compare_mode.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Distance_sensor/get_distance.py" afterPath="$PROJECT_DIR$/Distance_sensor/get_distance.py" />
@@ -110,8 +110,8 @@
       <file leaf-file-name="add_ID.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Add_new_ID/add_ID.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+            <state relative-caret-position="283">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="93" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -122,8 +122,8 @@
       <file leaf-file-name="upload_RPi.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Add_new_ID/upload_RPi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="52" column="37" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="37" />
+            <state relative-caret-position="221">
+              <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -626,8 +626,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Add_new_ID/add_ID.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        <state relative-caret-position="283">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="93" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -636,8 +636,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Add_new_ID/upload_RPi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="52" column="37" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="37" />
+        <state relative-caret-position="221">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
           <folding />
         </state>
       </provider>

@@ -7,9 +7,23 @@
 # Note: the camera is assumed to have its connection at the top
 
 
-DATE=$(date  +%Y-%m-%d_%H%M)
-#DATE="template" #Assumes that we store the template in database every time with name template_crop_bw.jpg
-
+#DATE=$(date  +%Y-%m-%d_%H%M)
+# Get user input
+echo "Please enter ID number (4 digits):"
+read DATE
+echo "Picture name: $DATE"
+if [[ -n ${DATE//[0-9]/} ]]
+then
+    echo "Contains letters! Wrong ID"
+    exit
+fi
+STRLENGTH=$(echo -n $DATE | wc -m)
+#echo $STRLENGTH
+if (( $STRLENGTH != 4 ))
+then
+    echo "Wrong number of characters"
+    exit
+fi
 python ./LEDs/LED_and_pic.py $DATE # From location of main.py
 
 # Call crop.py  to crop image that we just took
@@ -32,7 +46,7 @@ NAME='template' # Hassaan's code saves template taken from $DATE as  template.pn
 # Call add_ID.py  to upload TEMPLATE to the server and then to compare
 #python ./Add_new_ID/add_ID.py $NAME  # uploading through Heroku
 python ./Add_new_ID/upload_RPi.py $NAME  # uploading through RPi
-python ./Compare_ID/compare.py $NAME
+python ./Compare_ID/compare.py $DATE
 
 # DELETE IMAGES IN RPi
 

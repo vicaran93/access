@@ -32,7 +32,7 @@ while GPIO.input(18) == 0: # Blue button to break while loop
             os.system('./Compare_ID/compare_mode.sh')
 	    t2 = datetime.now()
 	    delta = t2 - t1 # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
-	    print("Time taken:"+str(delta.seconds)+" s")
+	    print("Total Runtime:"+str(delta.seconds)+" s")
 
             once = False
             flag = 0
@@ -55,7 +55,7 @@ while GPIO.input(18) == 0: # Blue button to break while loop
 			#echo "Time taken was: $(($duration / 60)) minutes and $(($duration % 60)) seconds."
 			t2 = datetime.now()
 			delta = t2 - t1 # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
-			print("Time taken:"+str(delta.seconds)+" s")
+			print("Total Runtime:"+str(delta.seconds)+" s")
                         once = False
                         flag = 0
                         break #exit while loop

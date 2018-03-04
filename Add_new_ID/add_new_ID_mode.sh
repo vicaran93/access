@@ -6,10 +6,25 @@
 
 
 #SECONDS=0
-DATE=$(date  +%Y-%m-%d_%H%M)
+#DATE=$(date  +%Y-%m-%d_%H%M)
+
+# Get user input
+echo "Please enter ID number (4 digits):"
+read DATE
 echo "Picture name: $DATE"
-#raspistill -vf -q 100 -o ~/Documents/access/camera/$DATE.jpg
-#raspistill -ISO 400 -ss 160000 -br 80 -co 100 -vf -o ~/Documents/access/camera/$DATE.jpg
+if [[ -n ${DATE//[0-9]/} ]]
+then
+    echo "Contains letters! Wrong ID"
+    exit
+fi
+STRLENGTH=$(echo -n $DATE | wc -m)
+#echo $STRLENGTH
+if (( $STRLENGTH != 4 ))
+then
+    echo "Wrong number of characters"
+    exit
+fi
+
 python ./LEDs/LED_and_pic.py $DATE
 
 

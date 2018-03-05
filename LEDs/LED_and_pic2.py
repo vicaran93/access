@@ -1,7 +1,7 @@
 
 import RPi.GPIO as GPIO
 import time,os,sys
-sys.path.insert(0,"../Image_processing")
+sys.path.insert(0,"/home/pi/Documents/access/Image_processing")
 from PIL import Image
 import numpy as np
 import crop_new

@@ -94,14 +94,14 @@ def ip(np_img,path_to_send):
 
     bw_img_path = path_to_send + "_bw.jpg"
     # I.save(save_to+bw_img_name)
-    b_w_img_filtered.save(np.asarray(bw_img_path,dtype=np.float32))
+    b_w_img_filtered.save(bw_img_path)
     print("------------------------ Done ------------------------")
 
 
-    template, cent = grid_image_template(I_np)
+    template, cent = grid_image_template(np.array(b_w_img_filtered,dtype=np.float32)) #I_np)
 
     # print template.shape[0], template.shape[1]
-    template = Image.fromarray(template)
+    template = Image.fromarray(template).convert('L')
     template.save(path + "template.jpg")
 
     with open('/home/pi/Documents/access/camera/location.txt', 'a') as my_file:

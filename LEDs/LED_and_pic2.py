@@ -39,9 +39,9 @@ def LED_and_img():
     # Open image and convert to numpy array
     path = "/home/pi/Documents/access/camera/"
     # Load image:
-    path = path + file_name
+    path_new = path + file_name
     path_to_send = path + code
-    img = Image.open(path)
+    img = Image.open(path_new)
 
     np_img = np.asarray(img, dtype=np.float32)
     crop_new.crop(np_img,path_to_send)

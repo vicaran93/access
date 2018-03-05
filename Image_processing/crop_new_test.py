@@ -67,44 +67,23 @@ def colorSeg(f, m, T):
     return g
 
 
-def ip(np_img,path_to_send):
+def ip(np_img):
     # Path variables
-    path = "/home/pi/Documents/access/camera/"  # "C:/Users/Victor/Documents/UMass Amherst/Fall 2017 (senior)/SDP/images/" #"/home/pi/Documents/access/camera/" # path without image name
-    save_to = path  # "/home/pi/Documents/access/camera/" #"" for same directory
-
-    # m = [255*0.14412,255*0.707508,255*0.115358]
-    # T = 0.25*255;
-
     m = [255 * 0.246405, 255 * 0.879411765, 255 * 0.061];
     T = 0.20 * 255;
 
     I_np = colorSeg(np_img, m, T)
     I = Image.fromarray(I_np).convert('L')
-    # I.show()
-
     b_w_img_filtered = I.filter(ImageFilter.MedianFilter(size=7))
     b_w_img_filtered = b_w_img_filtered.filter(ImageFilter.MedianFilter(size=7))
     b_w_img_filtered = b_w_img_filtered.filter(ImageFilter.MedianFilter(size=7))
     b_w_img_filtered = b_w_img_filtered.filter(ImageFilter.MedianFilter(size=7))
 
-    bw_img_path = path_to_send + "_bw.jpg"
-    # I.save(save_to+bw_img_name)
-    b_w_img_filtered.save(bw_img_path)
-    print("------------------------ Done ------------------------")
-
     template, cent = grid_image_template(np.array(b_w_img_filtered)) #I_np)
 
-    # print template.shape[0], template.shape[1]
     template = Image.fromarray(template)#.convert('L')
-    template.save(path + "template.jpg")
-
-    with open('/home/pi/Documents/access/camera/location.txt', 'a') as my_file:
-        my_file.write('%d %d\n' % (cent[0], cent[1]))
-
-    print("------------------------ Done ------------------------")
-
-
-
+    
+    
 def grid_image_template(im):
     num_grid = 8
     score = {}
@@ -138,6 +117,11 @@ def grid_image_template(im):
 
     return temp_im, cent
 
+def main():
+    path_to_image = r"C:\Users\Hassaan\Desktop\School related\Fall 2017\SDP\Real data\ID 11/8888_cropped_bw.jpg"
+    im = Image.open(path_to_image)
+    ip()
+    
 if __name__=="__main__":
     main()
 

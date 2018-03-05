@@ -46,19 +46,14 @@ def LED_and_img():
     img = np.array(img, dtype=np.float32)
     
     cropped_img = cn.crop(img, path_to_send)
-    print cropped_img.shape
     b_w_img_filtered = cn.ip(cropped_img, path_to_send)
     
-    print 'Applied median filter to images'
     bw_img_path = path_to_send + "_cropped_bw.jpg"
     # I.save(save_to+bw_img_name)
     b_w_img_filtered.save(bw_img_path)
     print("------------------------ Done ------------------------")
     
-    print np.asarray(b_w_img_filtered, dtype=np.uint8).shape
     template, cent = cn.grid_image_template(np.array(b_w_img_filtered)) #I_np)
-    print 'gridded the template'
-    print template.shape[0], template.shape[1]
     template = Image.fromarray(template).convert('L')
     template.save(path + "template.jpg")
 

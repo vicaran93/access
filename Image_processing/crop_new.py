@@ -71,7 +71,6 @@ def ip(np_img,path_to_send):
     # Path variables
     path = "/home/pi/Documents/access/camera/"  # "C:/Users/Victor/Documents/UMass Amherst/Fall 2017 (senior)/SDP/images/" #"/home/pi/Documents/access/camera/" # path without image name
     save_to = path  # "/home/pi/Documents/access/camera/" #"" for same directory
-    print 'In image processing'
     # m = [255*0.14412,255*0.707508,255*0.115358]
     # T = 0.25*255;
 
@@ -79,7 +78,6 @@ def ip(np_img,path_to_send):
     T = 0.20 * 255;
 
     I_np = colorSeg(np_img, m, T)
-    print 'Finished color segmentation'
     I = Image.fromarray(I_np).convert('L')
     # I.show()
 

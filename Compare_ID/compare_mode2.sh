@@ -25,20 +25,23 @@ then
     echo "Wrong number of characters"
     exit
 fi
-python main2.py $DATE 
+
+
+##python main2.py $DATE
 
 python ./LEDs/LED_and_pic.py $DATE # From location of main.py
 
 # Call crop.py  to crop image that we just took
-python ./Image_processing/crop.py $DATE
+#python ./Image_processing/crop.py $DATE
 
-DATE+=$'_cropped'
+#DATE+=$'_cropped'
 
 #python img2bw.py $DATE # This does not deal with the artifacts encountered in the imgs
 #python image_processing.py $DATE
-python ./Image_processing/ip_color_segmentation.py $DATE
 
-DATE+=$'_bw'
+#python ./Image_processing/ip_color_segmentation.py $DATE
+
+#DATE+=$'_bw'
 
 python ./Image_processing/better_template.py $DATE #Hassaan code
 

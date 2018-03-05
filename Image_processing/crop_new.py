@@ -5,6 +5,7 @@ from PIL import ImageFilter
 import math
 
 def crop(np_img, path_to_send):
+    print 'IN CROP'
     row, col, channel = np_img.shape
     midHeight = row/2.
     midWidth = col/2.
@@ -20,6 +21,7 @@ def crop(np_img, path_to_send):
     print(cropped_img_name)
     img2.save(cropped_img_name)
 
+    print 'Going to image processing'
     ip(cropped_img,path_to_send)
 
 def colorSeg(f, m, T):
@@ -72,7 +74,7 @@ def ip(np_img,path_to_send):
     # Path variables
     path = "/home/pi/Documents/access/camera/"  # "C:/Users/Victor/Documents/UMass Amherst/Fall 2017 (senior)/SDP/images/" #"/home/pi/Documents/access/camera/" # path without image name
     save_to = path  # "/home/pi/Documents/access/camera/" #"" for same directory
-
+    print 'In image processing'
     # m = [255*0.14412,255*0.707508,255*0.115358]
     # T = 0.25*255;
 
@@ -80,6 +82,7 @@ def ip(np_img,path_to_send):
     T = 0.20 * 255;
 
     I_np = colorSeg(np_img, m, T)
+    print 'Finished color segmentation'
     I = Image.fromarray(I_np).convert('L')
     # I.show()
 
@@ -87,14 +90,16 @@ def ip(np_img,path_to_send):
     b_w_img_filtered = b_w_img_filtered.filter(ImageFilter.MedianFilter(size=7))
     b_w_img_filtered = b_w_img_filtered.filter(ImageFilter.MedianFilter(size=7))
     b_w_img_filtered = b_w_img_filtered.filter(ImageFilter.MedianFilter(size=7))
-
+    
+    print 'Applied median filter to images'
     bw_img_path = path_to_send + "_bw.jpg"
     # I.save(save_to+bw_img_name)
     b_w_img_filtered.save(bw_img_path)
     print("------------------------ Done ------------------------")
 
     template, cent = grid_image_template(np.array(b_w_img_filtered)) #I_np)
-
+    print 'gridded the template'
+    
     # print template.shape[0], template.shape[1]
     template = Image.fromarray(template).convert('L')
     template.save(path + "template.jpg")
@@ -103,8 +108,6 @@ def ip(np_img,path_to_send):
         my_file.write('%d %d\n' % (cent[0], cent[1]))
 
     print("------------------------ Done ------------------------")
-
-
 
 def grid_image_template(im):
     num_grid = 8

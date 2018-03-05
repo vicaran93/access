@@ -43,9 +43,9 @@ def LED_and_img():
     img = Image.open(path_new)
 
     img = np.array(img, dtype=np.float64)
-    sys.exit()
+    print 'In LED'
     cn.crop(img, path_to_send)
-
+    print 'OUT LED'
 
 if __name__ == "__main__":
     LED_and_img()

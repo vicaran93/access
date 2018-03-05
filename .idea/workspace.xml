@@ -67,6 +67,30 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="image_processing.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Image_processing/image_processing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="50" column="37" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="img2bw.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Image_processing/img2bw.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="compare_mode2.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Compare_ID/compare_mode2.sh">
           <provider selected="true" editor-type-id="text-editor">
@@ -99,16 +123,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="better_template.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Image_processing/better_template.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="21" column="23" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="upload_RPi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Add_new_ID/upload_RPi.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -119,7 +133,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LED_and_pic2.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LED_and_pic2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LEDs/LED_and_pic2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
@@ -131,11 +145,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crop_new.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="crop_new.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Image_processing/crop_new.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+            <state relative-caret-position="254">
+              <caret line="91" column="67" selection-start-line="91" selection-start-column="67" selection-end-line="91" selection-end-column="67" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#541#1733#0" expanded="false" />
@@ -150,20 +164,6 @@
             <state relative-caret-position="68">
               <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ip_color_segmentation2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Image_processing/ip_color_segmentation2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="86" selection-end-column="67" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-                <element signature="e#120#1246#0" expanded="false" />
-                <element signature="e#1262#2718#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -212,9 +212,9 @@
         <option value="$PROJECT_DIR$/Image_processing/ip_color_segmentation2.py" />
         <option value="$PROJECT_DIR$/Add_new_ID/add_coordinates2.py" />
         <option value="$PROJECT_DIR$/Compare_ID/compare_mode2.sh" />
-        <option value="$PROJECT_DIR$/Image_processing/crop_new.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/LEDs/LED_and_pic2.py" />
+        <option value="$PROJECT_DIR$/Image_processing/crop_new.py" />
       </list>
     </option>
   </component>
@@ -279,6 +279,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="LEDs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="access" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="access" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Image_processing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -517,7 +531,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/add_ID.py" />
     <entry file="file://$PROJECT_DIR$/compare.py" />
     <entry file="file://$PROJECT_DIR$/checkInput.py" />
     <entry file="file://$PROJECT_DIR$/crop.py" />
@@ -582,16 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Image_processing/image_processing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Add_new_ID/add_ID.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
@@ -615,7 +618,7 @@
         <state relative-caret-position="1360">
           <caret line="92" column="4" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="4" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -625,7 +628,7 @@
         <state relative-caret-position="86">
           <caret line="6" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -635,7 +638,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="86" selection-end-column="67" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
             <element signature="e#120#1246#0" expanded="false" />
             <element signature="e#1262#2718#0" expanded="false" />
           </folding>
@@ -684,17 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Image_processing/crop_new.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#541#1733#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -727,12 +719,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Image_processing/image_processing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="50" column="37" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Image_processing/img2bw.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/LEDs/LED_and_pic2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="63" />
           <folding>
             <element signature="e#1#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Image_processing/crop_new.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="91" column="67" selection-start-line="91" selection-start-column="67" selection-end-line="91" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#541#1733#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -89,7 +89,7 @@ def ip(np_img,path_to_send):
 
     bw_img_path = path_to_send + "_bw.jpg"
     # I.save(save_to+bw_img_name)
-    b_w_img_filtered.save(bw_img_path)
+    b_w_img_filtered.save(np.asarray(bw_img_path,dtype=np.float32))
     print("------------------------ Done ------------------------")
 
 
@@ -107,6 +107,8 @@ def ip(np_img,path_to_send):
 
 
 def grid_image_template(im):
+
+
     num_grid = 8
     score = {}
     row, col = im.shape

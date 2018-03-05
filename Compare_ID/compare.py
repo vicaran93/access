@@ -26,14 +26,13 @@ with open(final_path, 'rb') as f: response = requests.post(final_url, files={'us
 
 print("\n--> SERVER RESPONSE:\n"+response.text) #TEXT/HTML
 lines = response.text.split('\n')
-info = lines[-4:-1]
+info = lines[-5:-1]
 info.append(lines[-1])
 
 with open(path+'info.txt', 'a') as out_file:
     for line in info:
-        out_file.write(line)
+        out_file.write(line+'\n')
     
-
 if response.text[0] == "I": # Image received...
     pass
     #print("We got response back.Run test.py and show green LED!")

@@ -8,7 +8,7 @@ def crop(np_img,path_to_send):
     x,y,z = np_img.shape
     midHeight = x//2
     midWidth = y//2
-    cropped_img = np_img[int(0.5*midHeight):int(1.5*midHeight)][int(0.5*midWidth):int(1.5*midWidth)][:]
+    cropped_img = np_img[int(0.5*midHeight):int(1.5*midHeight), int(0.5*midWidth):int(1.5*midWidth), :]
     
     r = Image.fromarray(np_img[:][:][0]).convert('L')
     g = Image.fromarray(np_img[:][:][1]).convert('L')

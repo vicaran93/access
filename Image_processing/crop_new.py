@@ -5,23 +5,21 @@ from PIL import ImageFilter
 import math
 
 def crop(np_img, path_to_send):
-    print 'IN CROP'
     row, col, channel = np_img.shape
     midHeight = row/2.
     midWidth = col/2.
     
     cropped_img = np_img[int(0.5*midHeight):int(1.5*midHeight), int(0.5*midWidth):int(1.5*midWidth), :]
     
-    r = Image.fromarray(np_img[:][:][0]).convert('L')
-    g = Image.fromarray(np_img[:][:][1]).convert('L')
-    b = Image.fromarray(np_img[:][:][2]).convert('L')
+    r = Image.fromarray(np_img[:,:,0]).convert('L')
+    g = Image.fromarray(np_img[:,:,1]).convert('L')
+    b = Image.fromarray(np_img[:,:,2]).convert('L')
     img2= Image.merge('RGB', (r, g, b))
 
     cropped_img_name = path_to_send+"_cropped.jpg"
     img2.save(cropped_img_name)
 
     return cropped_img
-    #ip(cropped_img,path_to_send)
 
 def colorSeg(f, m, T):
     '''

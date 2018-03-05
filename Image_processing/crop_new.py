@@ -1,12 +1,17 @@
 import numpy as np
 from PIL import Image
 def crop(np_img,path_to_send):
-    x,y,z = np_img.shape()
+    x,y,z = np_img.shape
     midHeight = x//2
     midWidth = y//2
-    cropped_img = np_img[0.5*midHeight:1.5*midHeight][0.5*midWidth:1.5*midWidth][:]
+    cropped_img = np_img[int(0.5*midHeight):int(1.5*midHeight)][int(0.5*midWidth):int(1.5*midWidth)][:]
 
-    img2 = Image.fromarray(np_img).convert('L')
+    
+    r = Image.fromarray(np_img[:][:][0]).convert('L')
+    g = Image.fromarray(np_img[:][:][1]).convert('L')
+    b = Image.fromarray(np_img[:][:][2]).convert('L')
+    img2= Image.merge('RGB', (r, g, b))
+
     cropped_img_name = path_to_send+"_cropped.jpg"
     print(cropped_img_name)
     img2.save(cropped_img_name)

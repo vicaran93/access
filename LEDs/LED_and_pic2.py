@@ -44,7 +44,7 @@ def LED_and_img():
     img = Image.open(path)
 
     np_img = np.asarray(img, dtype=np.float32)
-    crop(np_img,path_to_send)
+    crop_new.crop(np_img,path_to_send)
 
 
 

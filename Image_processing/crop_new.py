@@ -105,6 +105,7 @@ def ip(np_img,path_to_send):
     print("------------------------ Done ------------------------")
 
 
+
 def grid_image_template(im):
     num_grid = 8
     score = {}

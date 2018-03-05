@@ -29,7 +29,7 @@ fi
 
 ##python main2.py $DATE
 
-python ./LEDs/LED_and_pic.py $DATE # From location of main.py
+python ./LEDs/LED_and_pic2.py $DATE # From location of main.py
 
 # Call crop.py  to crop image that we just took
 #python ./Image_processing/crop.py $DATE
@@ -41,11 +41,11 @@ python ./LEDs/LED_and_pic.py $DATE # From location of main.py
 
 #python ./Image_processing/ip_color_segmentation.py $DATE
 
-#DATE+=$'_bw'
+DATE+=$'_bw'
 
-python ./Image_processing/better_template.py $DATE #Hassaan code
+##python ./Image_processing/better_template.py $DATE #Hassaan code
 
-python ./Add_new_ID/add_coordinates.py 'location.txt' #assumming Hassaan's code creates this file
+python ./Add_new_ID/add_coordinates2.py 'location.txt' #assumming Hassaan's code creates this file
 
 NAME='template' # Hassaan's code saves template taken from $DATE as  template.png
 

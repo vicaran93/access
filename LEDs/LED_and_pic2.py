@@ -4,7 +4,7 @@ import time,os,sys
 sys.path.insert(0,"../Image_processing")
 from PIL import Image
 import numpy as np
-from crop_new import crop
+import crop_new
 
 '''
 This script blinks green light 10 times using pin 12

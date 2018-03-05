@@ -57,7 +57,7 @@ def LED_and_img():
     template, cent = cn.grid_image_template(np.array(b_w_img_filtered)) #I_np)
     print 'gridded the template'
     
-    # print template.shape[0], template.shape[1]
+    print template.shape[0], template.shape[1]
     template = Image.fromarray(template)#.convert('L')
     template.save(path + "template.jpg")
 

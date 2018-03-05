@@ -79,7 +79,7 @@ def ip(np_img,path_to_send):
     T = 0.20 * 255;
 
     I_np = colorSeg(np_img, m, T)
-    I = Image.fromarray(I_np)#.convert('L')
+    I = Image.fromarray(I_np).convert('L')
     # I.show()
 
     b_w_img_filtered = I.filter(ImageFilter.MedianFilter(size=7))
@@ -138,6 +138,8 @@ def grid_image_template(im):
 
     return temp_im, cent
 
+if __name__=="__main__":
+    main()
 
 
 

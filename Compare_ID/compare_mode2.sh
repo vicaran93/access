@@ -41,7 +41,7 @@ python ./LEDs/LED_and_pic2.py $DATE # From location of main.py
 
 #python ./Image_processing/ip_color_segmentation.py $DATE
 
-DATE+=$'_bw'
+DATE+=$'_cropped_bw'
 
 ##python ./Image_processing/better_template.py $DATE #Hassaan code
 

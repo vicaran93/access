@@ -25,6 +25,8 @@ then
     echo "Wrong number of characters"
     exit
 fi
+python main2.py $DATE 
+
 python ./LEDs/LED_and_pic.py $DATE # From location of main.py
 
 # Call crop.py  to crop image that we just took

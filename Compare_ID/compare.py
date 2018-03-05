@@ -27,9 +27,11 @@ with open(final_path, 'rb') as f: response = requests.post(final_url, files={'us
 print("\n--> SERVER RESPONSE:\n"+response.text) #TEXT/HTML
 lines = response.text.split('\n')
 info = lines[-4:-1]
+info.append(lines[-1])
 
 with open(path+'info.txt', 'a') as out_file:
     out_file.write(info)
+    
 
 if response.text[0] == "I": # Image received...
     pass

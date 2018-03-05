@@ -58,7 +58,7 @@ def LED_and_img():
     print 'gridded the template'
     
     # print template.shape[0], template.shape[1]
-    template = Image.fromarray(template).convert('L')
+    template = Image.fromarray(template)#.convert('L')
     template.save(path + "template.jpg")
 
     with open('/home/pi/Documents/access/camera/location.txt', 'a') as my_file:

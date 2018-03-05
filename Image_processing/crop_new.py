@@ -38,9 +38,9 @@ def colorSeg(f, m, T):
     #rgb_im = f.convert('RGB')
     #r, g, b = rgb_im.split()
 
-    r = f[:][:][0]
-    g = f[:][:][1]
-    b = f[:][:][2]
+    r = f[:,:,0]
+    g = f[:,:,1]
+    b = f[:,:,2]
 
     # Average R G B values on the spheres
     ar = m[0]

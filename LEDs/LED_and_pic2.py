@@ -55,7 +55,7 @@ def LED_and_img():
     b_w_img_filtered.save(bw_img_path)
     print("------------------------ Done ------------------------")
     
-    print np.array(b_w_img_filtered).shape
+    print np.asarray(b_w_img_filtered, dtype=np.uint8).shape
     template, cent = cn.grid_image_template(np.array(b_w_img_filtered)) #I_np)
     print 'gridded the template'
     

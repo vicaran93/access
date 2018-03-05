@@ -79,7 +79,7 @@ def ip(np_img,path_to_send):
     T = 0.20 * 255;
 
     I_np = colorSeg(np_img, m, T)
-    I = Image.fromarray(I_np)#.convert('L')
+    I = Image.fromarray(I_np).convert('L')
     # I.show()
 
     b_w_img_filtered = I.filter(ImageFilter.MedianFilter(size=7))
@@ -95,7 +95,7 @@ def ip(np_img,path_to_send):
     template, cent = grid_image_template(np.array(b_w_img_filtered)) #I_np)
 
     # print template.shape[0], template.shape[1]
-    template = Image.fromarray(template)#.convert('L')
+    template = Image.fromarray(template).convert('L')
     template.save(path + "template.jpg")
 
     with open('/home/pi/Documents/access/camera/location.txt', 'a') as my_file:

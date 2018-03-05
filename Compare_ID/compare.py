@@ -25,9 +25,12 @@ final_url=base_url+"/compare.php"
 with open(final_path, 'rb') as f: response = requests.post(final_url, files={'userfile': f})
 
 print("\n--> SERVER RESPONSE:\n"+response.text) #TEXT/HTML
-lines = response.text.readlines()
-print("line 4: "+lines[4])
-print("last line: "+lines[-1])
+lines = response.text.split('\n')
+info = lines[-4:-1]
+
+with open(path+'info.txt', 'a') as out_file:
+    out_file.write(info)
+
 if response.text[0] == "I": # Image received...
     pass
     #print("We got response back.Run test.py and show green LED!")

@@ -50,7 +50,7 @@ def LED_and_img():
     b_w_img_filtered = cn.ip(cropped_img, path_to_send)
     
     print 'Applied median filter to images'
-    bw_img_path = path_to_send + "_bw.jpg"
+    bw_img_path = path_to_send + "_cropped_bw.jpg"
     # I.save(save_to+bw_img_name)
     b_w_img_filtered.save(bw_img_path)
     print("------------------------ Done ------------------------")

@@ -18,10 +18,8 @@ def crop(np_img, path_to_send):
     img2= Image.merge('RGB', (r, g, b))
 
     cropped_img_name = path_to_send+"_cropped.jpg"
-    print(cropped_img_name)
     img2.save(cropped_img_name)
 
-    print 'Going to image processing'
     return cropped_img
     #ip(cropped_img,path_to_send)
 

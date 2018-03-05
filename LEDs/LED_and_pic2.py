@@ -43,7 +43,7 @@ def LED_and_img():
     path_to_send = path + code
     img = Image.open(path_new)
 
-    np_img = np.asarray(img, dtype=np.float32)
+    np_img = np.array(img)
     crop_new.crop(np_img,path_to_send)
 
 

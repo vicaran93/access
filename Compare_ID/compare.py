@@ -30,7 +30,8 @@ info = lines[-4:-1]
 info.append(lines[-1])
 
 with open(path+'info.txt', 'a') as out_file:
-    out_file.write(info)
+    for line in info:
+        out_file.write(line)
     
 
 if response.text[0] == "I": # Image received...

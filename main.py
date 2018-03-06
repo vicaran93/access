@@ -29,7 +29,7 @@ while GPIO.input(18) == 0: # Blue button to break while loop
         if once:
             print("First button (PIN4) pressed. Entering 'compare mode' ")
 	    t1 = datetime.now()
-            os.system('./Compare_ID/compare_mode2.sh')
+            os.system('./Compare_ID/compare_mode.sh')
 	    t2 = datetime.now()
 	    delta = t2 - t1 # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
 	    print("Total Runtime:"+str(delta.seconds)+" s")

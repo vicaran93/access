@@ -10,8 +10,8 @@
 #DATE=$(date  +%Y-%m-%d_%H%M)
 # Get user input
 echo "Please enter ID number (4 digits):"
-#read DATE
-DATE=8888
+read DATE
+#DATE=8888
 echo "Picture name: $DATE"
 if [[ -n ${DATE//[0-9]/} ]]
 then

@@ -1,5 +1,6 @@
 from PIL import Image
 import sys,math,ast
+from datetime import datetime
 
 '''
     This program crops an image located at where the variable 'path' specifies (Camera folder). Resulting cropped image is saved at
@@ -21,6 +22,8 @@ import sys,math,ast
 
 
 '''
+t1 = datetime.now()
+
 # Path variables
 path="/home/pi/Documents/access/camera/" # path without image name 
 save_to="/home/pi/Documents/access/camera/" #"" for same directory
@@ -91,5 +94,9 @@ img2 = img.crop(
 #img2 = img.crop((0, 0, xSize/2, ySize/2))
 cropped_img_name=file_name+"_cropped.jpg"
 img2.save(save_to+cropped_img_name)
+
+t2 = datetime.now()
+delta = t2 - t1  # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
+print("Total Runtime (Cropping picture):" + str(delta.seconds) + " s")
 
 

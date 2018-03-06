@@ -5,13 +5,14 @@ import sys
 import os
 import botocore
 import boto3
+from datetime import datetime
 
 '''
     This program uploads a file with public permissions to an aws S3 bucket.
     Three environment variables must be setup accordingly:  AWS_ACCESS_KEY_ID  AWS_SECRET_ACCESS_KEY BUCKET
 
 '''
-
+t1 = datetime.now()
 
 # Check correct amount of inputs:
 path="/home/pi/Documents/access/camera/"#"C:/Users/Victor/Documents/UMass Amherst/Fall 2017 (senior)/SDP/images/"  # path without image name
@@ -56,6 +57,10 @@ with open(file_path, 'rb') as data:
         file_path, aws_s3_bucket_name, file_name,
         ExtraArgs={'ACL': 'public-read'}
     )
+
+t2 = datetime.now()
+delta = t2 - t1  # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
+print("Total Runtime (Uploading):" + str(delta.seconds) + " s")
 
 print("------------------------ Done uploading: ------------------------")
 

@@ -1,6 +1,7 @@
 import sys
 from PIL import Image
 import numpy as np
+from datetime import datetime
 
 def read_image(image_name): 
     """
@@ -53,6 +54,7 @@ def grid_image_template(im):
     return temp_im, cent
     
 def main():
+    t1 = datetime.now()
     # Path variables
     path="/home/pi/Documents/access/camera/"
     print("------------------------ Obtaining Best Template ------------------------")
@@ -73,6 +75,10 @@ def main():
     
     with open('/home/pi/Documents/access/camera/location.txt','a') as my_file:
         my_file.write('%d %d\n'%(cent[0], cent[1]))
+
+    t2 = datetime.now()
+    delta = t2 - t1  # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
+    print("Total Runtime (Selecting better template):" + str(delta.seconds) + " s")
 
     print("------------------------ Done ------------------------")
     

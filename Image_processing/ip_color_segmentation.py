@@ -3,6 +3,7 @@ import sys
 import numpy as np
 from PIL import ImageFilter
 import math
+from datetime import datetime
 
 def colorSeg(f, m, T):
     '''
@@ -47,6 +48,8 @@ def colorSeg(f, m, T):
     return g
 
 
+t1 = datetime.now()
+
 # Path variables
 path="/home/pi/Documents/access/camera/" # "C:/Users/Victor/Documents/UMass Amherst/Fall 2017 (senior)/SDP/images/" #"/home/pi/Documents/access/camera/" # path without image name
 save_to=path # "/home/pi/Documents/access/camera/" #"" for same directory
@@ -84,4 +87,8 @@ b_w_img_filtered = b_w_img_filtered.filter(ImageFilter.MedianFilter(size=7))
 bw_img_name=file_name+"_bw.jpg"
 #I.save(save_to+bw_img_name)
 b_w_img_filtered.save(save_to+bw_img_name)
+
+t2 = datetime.now()
+delta = t2 - t1  # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
+print("Total Runtime (Color segmentation):" + str(delta.seconds) + " s")
 print("------------------------ Done ------------------------")

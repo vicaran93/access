@@ -1,6 +1,7 @@
 
 import RPi.GPIO as GPIO
 import time,os,sys
+from datetime import datetime
 
 '''
 This script blinks green light 10 times using pin 12
@@ -8,6 +9,9 @@ This script blinks green light 10 times using pin 12
 
 
 #initialize the GPIO
+
+t1 = datetime.now()
+
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(21,GPIO.OUT)
 
@@ -32,6 +36,10 @@ def blinkOnce(pin):
 print("------------------------ Taking Image ------------------------")
 for i in range(0,1):
 	blinkOnce(21)
+
+t2 = datetime.now()
+delta = t2 - t1  # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
+print("Total Runtime (Taking picture):" + str(delta.seconds) + " s")
 print("------------------------ Done ------------------------")
 
 GPIO.cleanup()

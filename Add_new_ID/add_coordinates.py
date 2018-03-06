@@ -1,11 +1,14 @@
 import requests
 import sys,os
 from PIL import Image
+from datetime import datetime
 
 '''
  Image name should be pass through console i.e sys.argv[1]. It then opens file in "/home/pi/Documents/access/camera/"
  with the name provided as an input. This image is uploaded to serer using upload.php code in our Heroku app
 '''
+
+t1 = datetime.now()
 
 # Path variables
 path="/home/pi/Documents/access/camera/"
@@ -33,4 +36,10 @@ elif  response.text == "Upload error":
 else: print("No response detected")
 
 print(response.status_code, response.reason) #HTTP
+
+t2 = datetime.now()
+delta = t2 - t1  # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
+print("Total Runtime (Selecting better template):" + str(delta.seconds) + " s")
 print("------------------------ Done uploading coordinates ------------------------")
+
+

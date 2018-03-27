@@ -12,7 +12,7 @@ t1 = datetime.now()
 
 # Path variables
 path="/home/pi/Documents/access/camera/"
-file_name="info.txt" 
+file_name="location.txt" 
 final_path=path+file_name
 
 
@@ -39,7 +39,7 @@ print(response.status_code, response.reason) #HTTP
 
 t2 = datetime.now()
 delta = t2 - t1  # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
-print("Total Runtime (Selecting better template):" + str(delta.seconds) + " s")
+print("Total Runtime (Adding coordinates):" + str(delta.seconds) + " s")
 print("------------------------ Done uploading coordinates ------------------------")
 
 

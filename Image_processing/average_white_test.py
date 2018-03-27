@@ -10,8 +10,10 @@ def average_white(img):
     rows = img_np.shape[0]
     cols = img_np.shape[1]
     num_whites = np.count_nonzero(img_np)
-
-    avr = num_whites / (rows*cols)
+    #print("Number of whites: "+str(num_whites))
+    #print("rows times cols: "+str(rows*cols))
+    avr = num_whites*1.0 / (rows*cols)
+    #print("AVR:"+str(avr))
     return avr
 
 
@@ -40,9 +42,9 @@ def main():
     img = Image.open(path)
 
     avr_w  = average_white(img)
-
-    print("Average white pixels amount: ") #+str(avr_w)
-    print("{0:.2f}".format(round(avr_w, 2)))
+    #print(avr_w)
+    print("Average white pixels amount: "+"{0:.3f}".format(round(avr_w, 3)))
+    #print("{0:.3f}".format(round(avr_w, 3)))
 
 
     '''

@@ -40,8 +40,10 @@ def main():
     img = Image.open(path)
 
     avr_w  = average_white(img)
-    text = "Average white pixels amount: "+str(avr_w)
-    print(text)
+
+    print("Average white pixels amount: ") #+str(avr_w)
+    print("{0:.2f}".format(round(avr_w, 2)))
+
 
     '''
     if avr_w > MIN_WHITE_AVERAGE and avr_w < MAX_WHIRE_AVERAGE:

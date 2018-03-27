@@ -78,12 +78,13 @@ T = 0.20*255;
 I = colorSeg(img,m,T)
 I = Image.fromarray(I).convert('L')
 #I.show()
-
+b_w_img_filtered = I.filter(ImageFilter.MedianFilter(size=11))
+'''
 b_w_img_filtered = I.filter(ImageFilter.MedianFilter(size=7))
 b_w_img_filtered = b_w_img_filtered.filter(ImageFilter.MedianFilter(size=7))
 b_w_img_filtered = b_w_img_filtered.filter(ImageFilter.MedianFilter(size=7))
 b_w_img_filtered = b_w_img_filtered.filter(ImageFilter.MedianFilter(size=7))
-
+'''
 bw_img_name=file_name+"_bw.jpg"
 #I.save(save_to+bw_img_name)
 b_w_img_filtered.save(save_to+bw_img_name)

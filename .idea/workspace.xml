@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46b778e6-1966-45fe-9548-75ad97d0a50b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Image_processing/average_white_test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/access.iml" afterPath="$PROJECT_DIR$/.idea/access.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
@@ -81,14 +82,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ip_color_segmentation.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ip_color_segmentation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Image_processing/ip_color_segmentation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="91" column="3" selection-start-line="91" selection-start-column="3" selection-end-line="91" selection-end-column="3" />
+            <state relative-caret-position="403">
+              <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="average_white_test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Image_processing/average_white_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="43" column="14" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -116,8 +127,8 @@
       <file leaf-file-name="compare_mode.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Compare_ID/compare_mode.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" column="30" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="30" />
+            <state relative-caret-position="136">
+              <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -178,7 +189,6 @@
         <option value="$PROJECT_DIR$/image_processing.py" />
         <option value="$PROJECT_DIR$/Distance_sensor/get_distance.py" />
         <option value="$PROJECT_DIR$/Tests/test_camera.sh" />
-        <option value="$PROJECT_DIR$/Compare_ID/compare_mode.sh" />
         <option value="$PROJECT_DIR$/Add_new_ID/add_new_ID_mode.sh" />
         <option value="$PROJECT_DIR$/Add_new_ID/add_ID.py" />
         <option value="$PROJECT_DIR$/Compare_ID/compare.py" />
@@ -195,6 +205,8 @@
         <option value="$PROJECT_DIR$/Add_new_ID/add_coordinates.py" />
         <option value="$PROJECT_DIR$/Add_new_ID/upload_RPi.py" />
         <option value="$PROJECT_DIR$/Image_processing/ip_color_segmentation.py" />
+        <option value="$PROJECT_DIR$/Compare_ID/compare_mode.sh" />
+        <option value="$PROJECT_DIR$/Image_processing/average_white_test.py" />
       </list>
     </option>
   </component>
@@ -259,7 +271,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Add_new_ID" />
+              <option name="myItemId" value="Compare_ID" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -272,6 +284,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Victor\Documents\UMass Amherst\Fall 2017 (senior)\SDP\access\Image_processing" />
       <recent name="C:\Users\Victor\Documents\UMass Amherst\Fall 2017 (senior)\SDP\access\Add_new_ID" />
     </key>
   </component>
@@ -469,7 +482,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/compare.py" />
     <entry file="file://$PROJECT_DIR$/checkInput.py" />
     <entry file="file://$PROJECT_DIR$/crop.py" />
     <entry file="file://$PROJECT_DIR$/takepic.sh" />
@@ -646,14 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Compare_ID/compare_mode.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="30" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Add_new_ID/upload_RPi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -666,11 +670,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Image_processing/ip_color_segmentation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="91" column="3" selection-start-line="91" selection-start-column="3" selection-end-line="91" selection-end-column="3" />
+        <state relative-caret-position="403">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Compare_ID/compare_mode.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Image_processing/average_white_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="43" column="14" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>

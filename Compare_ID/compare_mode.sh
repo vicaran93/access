@@ -37,7 +37,7 @@ DATE+=$'_cropped'
 python ./Image_processing/ip_color_segmentation.py $DATE
 
 DATE+=$'_bw'
-
+python ./Image_processing/average_white_test.py $DATE # Average white
 python ./Image_processing/better_template.py $DATE #Hassaan code
 
 python ./Add_new_ID/add_coordinates.py 'location.txt' #assumming Hassaan's code creates this file

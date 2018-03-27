@@ -1,5 +1,5 @@
 from PIL import Image
-import sys,math,ast
+import sys, math, ast
 from datetime import datetime
 
 '''
@@ -25,77 +25,76 @@ from datetime import datetime
 t1 = datetime.now()
 
 # Path variables
-path="/home/pi/Documents/access/camera/" # path without image name 
-save_to="/home/pi/Documents/access/camera/" #"" for same directory
-#cropped_img_name="crop_test.jpg"
+path = "/home/pi/Documents/access/camera/"  # path without image name
+save_to = "/home/pi/Documents/access/camera/"  # "" for same directory
+# cropped_img_name="crop_test.jpg"
 
 
 # Initializing settings:
 #   Read if there are inputs from command line
-if len(sys.argv) == 5: #meaning that we have 4 inputs from command line 'filename width height [x,y]'
+if len(sys.argv) == 5:  # meaning that we have 4 inputs from command line 'filename width height [x,y]'
 
     # Meaning  that we have only one input so it has only the name of the file
-    #print("One input detected. Using input as the file name and using default cropping settings")
+    # print("One input detected. Using input as the file name and using default cropping settings")
     file_name = sys.argv[1]
     width = int(sys.argv[2])
     height = int(sys.argv[3])
-    #xy = sys.argv[4]
-    #xy = ast.literal_eval(xy)  # '[1,2]' --> [1,2]
+    # xy = sys.argv[4]
+    # xy = ast.literal_eval(xy)  # '[1,2]' --> [1,2]
     # Load image:
-    path = path+file_name+".jpg" # assuming jpg extension which is the one that we use when we take a picture
+    path = path + file_name + ".jpg"  # assuming jpg extension which is the one that we use when we take a picture
     img = Image.open(path)
-    xsize,ysize = img.size
-    #print(str(xsize))
-    #print(str(ysize))
-    x_center = math.ceil(xsize/2) # check ceil
-    y_center = math.ceil(ysize/2)  # check ceil
+    xsize, ysize = img.size
+    # print(str(xsize))
+    # print(str(ysize))
+    x_center = math.ceil(xsize / 2)  # check ceil
+    y_center = math.ceil(ysize / 2)  # check ceil
     width = x_center
     height = y_center
-    xy = [x_center,y_center]
+    xy = [x_center, y_center]
 
 
 elif len(sys.argv) == 2:
     # Meaning  that we have only one input so it has only the name of the file
-    #print("One input detected. Using input as the file name and using default cropping settings")
+    # print("One input detected. Using input as the file name and using default cropping settings")
     file_name = sys.argv[1]
     # Load image:
-    path = path+file_name+".jpg" # assuming jpg extension which is the one that we use when we take a picture
+    path = path + file_name + ".jpg"  # assuming jpg extension which is the one that we use when we take a picture
     img = Image.open(path)
-    xsize,ysize = img.size
-    #print(str(xsize))
-    #print(str(ysize))
-    x_center = math.ceil(xsize/2) # check ceil
-    y_center = math.ceil(ysize/2)  # check ceil
+    xsize, ysize = img.size
+    # print(str(xsize))
+    # print(str(ysize))
+    x_center = math.ceil(xsize / 2)  # check ceil
+    y_center = math.ceil(ysize / 2)  # check ceil
     width = x_center
     height = y_center
-    xy = [x_center,y_center]
+    xy = [x_center, y_center]
 else:
-    #no inputs at command line
+    # no inputs at command line
     print("No inputs detected. Using default values. Using filename = 'test1.jpg'")
     file_name = "test1"
     # Load image:
-    path = path+file_name+".jpg" # assuming jpg extension which is the one that we use when we take a picture
+    path = path + file_name + ".jpg"  # assuming jpg extension which is the one that we use when we take a picture
     img = Image.open(path)
-    xsize,ysize = img.size
-    #print(str(xsize))
-    #print(str(ysize))
-    x_center = math.ceil(xsize/2) # check ceil
-    y_center = math.ceil(ysize/2)  # check ceil
+    xsize, ysize = img.size
+    # print(str(xsize))
+    # print(str(ysize))
+    x_center = math.ceil(xsize / 4)
+    y_center = math.ceil(ysize / 4)
     width = x_center
     height = y_center
-    xy = [x_center,y_center]
-
+    xy = [x_center, y_center]
 
 # Verify cropping coordinates
 print("------------------------ Image Processing ------------------------")
-print(" -> Cropping image: "+file_name)
-x_i = math.ceil(xy[0] - width/2)
-if x_i < 0: x_i=0
-y_i = math.ceil(xy[1] - height/2)
-if y_i < 0: y_i=0
-x_f = math.ceil(xy[0] + width/2)
+print(" -> Cropping image: " + file_name)
+x_i = math.ceil(xy[0] - width / 2)
+if x_i < 0: x_i = 0
+y_i = math.ceil(xy[1] - height / 2)
+if y_i < 0: y_i = 0
+x_f = math.ceil(xy[0] + width / 2)
 if x_f > xsize: x_f = xsize
-y_f = math.ceil(xy[1] + height/2)
+y_f = math.ceil(xy[1] + height / 2)
 if y_f > ysize: y_f = ysize
 
 img2 = img.crop(
@@ -106,12 +105,13 @@ img2 = img.crop(
         y_f
     )
 )
-#img2 = img.crop((0, 0, xSize/2, ySize/2))
-cropped_img_name=file_name+"_cropped.jpg"
-img2.save(save_to+cropped_img_name)
+# img2 = img.crop((0, 0, xSize/2, ySize/2))
+#cropped_img_name = file_name + "_cropped.jpg"
+cropped_img_name = "template.jpg"
+img2.save(save_to + cropped_img_name)
 
 t2 = datetime.now()
 delta = t2 - t1  # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
-print("Total Runtime (Cropping picture):" + str(delta.seconds) + " s")
+print("Total Runtime (Cropping template):" + str(delta.seconds) + " s")
 
 

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46b778e6-1966-45fe-9548-75ad97d0a50b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Image_processing/crop_template.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/access.iml" afterPath="$PROJECT_DIR$/.idea/access.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
@@ -63,8 +64,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="29" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="29" />
+            <state relative-caret-position="34">
+              <caret line="2" column="9" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -73,8 +74,20 @@
       <file leaf-file-name="crop.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Image_processing/crop.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1615">
-              <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="99" selection-end-column="70" />
+            <state relative-caret-position="467">
+              <caret line="53" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crop_template.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Image_processing/crop_template.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="110" column="37" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="37" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -94,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="average_white_test.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="average_white_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Image_processing/average_white_test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
+              <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -127,8 +140,8 @@
       <file leaf-file-name="compare_mode.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Compare_ID/compare_mode.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+            <state relative-caret-position="17">
+              <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -200,13 +213,14 @@
         <option value="$PROJECT_DIR$/Image_processing/crop_new.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/LEDs/LED_and_pic.py" />
-        <option value="$PROJECT_DIR$/Image_processing/crop.py" />
         <option value="$PROJECT_DIR$/Image_processing/better_template.py" />
         <option value="$PROJECT_DIR$/Add_new_ID/add_coordinates.py" />
         <option value="$PROJECT_DIR$/Add_new_ID/upload_RPi.py" />
         <option value="$PROJECT_DIR$/Image_processing/ip_color_segmentation.py" />
         <option value="$PROJECT_DIR$/Compare_ID/compare_mode.sh" />
         <option value="$PROJECT_DIR$/Image_processing/average_white_test.py" />
+        <option value="$PROJECT_DIR$/Image_processing/crop.py" />
+        <option value="$PROJECT_DIR$/Image_processing/crop_template.py" />
       </list>
     </option>
   </component>
@@ -271,7 +285,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Compare_ID" />
+              <option name="myItemId" value="Image_processing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -482,7 +496,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/checkInput.py" />
     <entry file="file://$PROJECT_DIR$/crop.py" />
     <entry file="file://$PROJECT_DIR$/takepic.sh" />
     <entry file="file://$PROJECT_DIR$/takeIDpic.sh" />
@@ -595,19 +608,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="29" />
+        <state relative-caret-position="34">
+          <caret line="2" column="9" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="29" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Image_processing/crop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="99" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -678,19 +681,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Compare_ID/compare_mode.sh">
+    <entry file="file://$PROJECT_DIR$/Image_processing/average_white_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+        <state relative-caret-position="209">
+          <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Image_processing/average_white_test.py">
+    <entry file="file://$PROJECT_DIR$/Compare_ID/compare_mode.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
+        <state relative-caret-position="17">
+          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Image_processing/crop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="53" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Image_processing/crop_template.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="110" column="37" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

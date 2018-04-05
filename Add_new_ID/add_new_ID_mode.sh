@@ -38,9 +38,9 @@ python ./Image_processing/crop.py $DATE
 
 DATE+=$'_cropped'
 
-#python img2bw.py $DATE
+python img2bw.py $DATE
 #python image_processing.py $DATE
-python ./Image_processing/ip_color_segmentation.py $DATE
+#python ./Image_processing/ip_color_segmentation.py $DATE
 
 DATE+=$'_bw'
 

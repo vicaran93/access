@@ -21,25 +21,25 @@ img.show()
 #green = img[:,:,2]
 rgb_im = img.convert('RGB')
 r, g, b = rgb_im.split()
-[x,y] = r.size
-[x2,y2] = b.size
+##[x,y] = r.size
+##[x2,y2] = b.size
 
 #r= np.zeros((x,y))
-r=r.point(lambda i: i * 0)
+##r=r.point(lambda i: i * 0)
 #b= np.zeros((x2,y2))
-b=b.point(lambda i: i * 0)
+##b=b.point(lambda i: i * 0)
 #img[:,:,0] = 0
 #img[:,:,2] = 0
 
 #green = img
 
-green_img = Image.merge('RGB', (r, g, b))
-green_img.show()
+##green_img = Image.merge('RGB', (r, g, b))
+##green_img.show()
 #new_img = np.zeros(img.shape);
 #new_img[:,:,2] = green
 
 #ave_green = mean(mean(green));
-ave_green =np.mean(g);
+ave_green = 100 # np.mean(g);
 #A[np.where(A>2)]
 #green(green < ave_green) = 0;
 

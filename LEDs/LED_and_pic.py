@@ -26,7 +26,7 @@ def blinkOnce(pin):
 	GPIO.output(pin,True)
 	print("UV LED on!")
 	#time.sleep(30) #0.5
-	temp ="raspistill -ISO 400 -ss 160000 -br 80 -co 100 -vf -o ~/Documents/access/camera/"+file_name
+	temp ="raspistill -ISO 400 -awb off -awbg 1,1  -ss 160000 -br 80 -co 100 -vf -o ~/Documents/access/camera/"+file_name
         os.system(temp)
 	GPIO.output(pin,False)
 	#time.sleep(0.5)

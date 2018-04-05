@@ -38,11 +38,13 @@ python ./Image_processing/crop.py $DATE
 
 DATE+=$'_cropped'
 
-#python img2bw.py $DATE
+python ./Image_processing/img2bw.py $DATE
 #python image_processing.py $DATE
-python ./Image_processing/ip_color_segmentation.py $DATE
+#python ./Image_processing/ip_color_segmentation.py $DATE
 
 DATE+=$'_bw'
+
+python ./Image_processing/average_white_test.py $DATE # Average white
 
 # Call add_ID.py  to upload image to the server
 #python ./Add_new_ID/add_ID.py $DATE

@@ -32,13 +32,14 @@ python ./Image_processing/crop.py $DATE
 
 DATE+=$'_cropped'
 
-#python img2bw.py $DATE # This does not deal with the artifacts encountered in the imgs
+python ./Image_processing/img2bw.py $DATE # This does not deal with the artifacts encountered in the imgs
 #python image_processing.py $DATE
-python ./Image_processing/ip_color_segmentation.py $DATE
+#python ./Image_processing/ip_color_segmentation.py $DATE
 
 DATE+=$'_bw'
 python ./Image_processing/average_white_test.py $DATE # Average white
-python ./Image_processing/better_template.py $DATE #Hassaan code
+#python ./Image_processing/better_template.py $DATE #Hassaan code
+python ./Image_processing/crop_template.py $DATE
 
 python ./Add_new_ID/add_coordinates.py 'location.txt' #assumming Hassaan's code creates this file
 

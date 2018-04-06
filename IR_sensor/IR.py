@@ -9,7 +9,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO_TRIGGER = 6
 
 # set GPIO direction (IN / OUT)
-GPIO.setup(GPIO_TRIGGER, GPIO.IN)
+GPIO.setup(GPIO_TRIGGER, GPIO.IN,pull_up_down=GPIO.PUD_UP)
 
 
 def IR_input():

@@ -25,6 +25,12 @@ then
     echo "Wrong number of characters"
     exit
 fi
+
+# Getting template number for automatic upload of templates for testing
+echo "Enter template number (1 digit):"
+read TEMP_NUM
+
+
 python ./LEDs/LED_and_pic.py $DATE # From location of main.py
 
 # Call crop.py  to crop image that we just took
@@ -47,7 +53,7 @@ NAME='template' # Hassaan's code saves template taken from $DATE as  template.pn
 
 # Call add_ID.py  to upload TEMPLATE to the server and then to compare
 #python ./Add_new_ID/add_ID.py $NAME  # uploading through Heroku
-python ./Add_new_ID/upload_RPi.py $NAME  # uploading through RPi
+python ./Add_new_ID/upload_RPi.py $NAME  $TEMP_NUM # uploading through RPi  $TEMP_NUM for testing
 python ./Compare_ID/compare.py $DATE
 
 # DELETE IMAGES IN RPi

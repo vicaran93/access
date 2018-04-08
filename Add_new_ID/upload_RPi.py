@@ -50,12 +50,17 @@ except botocore.exceptions.ClientError as e:
 
 # Bucket is opened. Now we can upload file to Bucket
 
+s3 = boto3.client('s3')
+with open(file_path, 'rb') as data:
+    s3.upload_file(
+        file_path, aws_s3_bucket_name, file_name , # file_name --> 'folder/{}'.format(filename)
+        ExtraArgs={'ACL': 'public-read'}
+    )
 # Upload image:
 if len(sys.argv) == 3: # two inputs
     file_name = file_name+template_number+".jpg"
-else:
-    file_name = file_name + ".jpg"
-s3 = boto3.client('s3')
+
+
 with open(file_path, 'rb') as data:
     s3.upload_file(
         file_path, aws_s3_bucket_name, '9004/{}'.format(file_name) , # file_name --> 'folder/{}'.format(filename)

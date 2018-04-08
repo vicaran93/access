@@ -32,11 +32,7 @@ python ./Image_processing/crop.py $DATE
 
 DATE+=$'_cropped'
 
-<<<<<<< HEAD
 python ./Image_processing/img2bw.py $DATE # This does not deal with the artifacts encountered in the imgs
-=======
-python img2bw.py $DATE # This does not deal with the artifacts encountered in the imgs
->>>>>>> 29b06c39433bfba4811667f00a638d10a52c6e8f
 #python image_processing.py $DATE
 #python ./Image_processing/ip_color_segmentation.py $DATE
 

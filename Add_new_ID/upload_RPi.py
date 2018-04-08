@@ -54,7 +54,7 @@ file_name = file_name+".jpg"
 s3 = boto3.client('s3')
 with open(file_path, 'rb') as data:
     s3.upload_file(
-        file_path, aws_s3_bucket_name, file_name,
+        file_path, aws_s3_bucket_name, '9004/{}'.format(file_name) , # file_name --> 'folder/{}'.format(filename)
         ExtraArgs={'ACL': 'public-read'}
     )
 

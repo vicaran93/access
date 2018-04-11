@@ -88,13 +88,13 @@ else:
 # Verify cropping coordinates
 print("------------------------ Image Processing ------------------------")
 print(" -> Cropping image: " + file_name)
-x_i = math.ceil(xy[0] - width / 2)
+x_i = math.ceil(xy[0] - width / 4) # change it to divide by 4 (before 2)
 if x_i < 0: x_i = 0
-y_i = math.ceil(xy[1] - height / 2)
+y_i = math.ceil(xy[1] - height / 4)
 if y_i < 0: y_i = 0
-x_f = math.ceil(xy[0] + width / 2)
+x_f = math.ceil(xy[0] + width / 4)
 if x_f > xsize: x_f = xsize
-y_f = math.ceil(xy[1] + height / 2)
+y_f = math.ceil(xy[1] + height / 4)
 if y_f > ysize: y_f = ysize
 
 img2 = img.crop(

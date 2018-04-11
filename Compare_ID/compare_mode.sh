@@ -47,14 +47,14 @@ python ./Image_processing/average_white_test.py $DATE # Average white
 #python ./Image_processing/better_template.py $DATE #Hassaan code
 python ./Image_processing/crop_template.py $DATE
 
-python ./Add_new_ID/add_coordinates.py 'location.txt' #assumming Hassaan's code creates this file
+###python ./Add_new_ID/add_coordinates.py 'location.txt' #assumming Hassaan's code creates this file
 
 NAME='template' # Hassaan's code saves template taken from $DATE as  template.png
 
 # Call add_ID.py  to upload TEMPLATE to the server and then to compare
 #python ./Add_new_ID/add_ID.py $NAME  # uploading through Heroku
 python ./Add_new_ID/upload_RPi.py $NAME  $TEMP_NUM # uploading through RPi  $TEMP_NUM for testing
-python ./Compare_ID/compare.py $DATE
+###python ./Compare_ID/compare.py $DATE
 
 # DELETE IMAGES IN RPi
 

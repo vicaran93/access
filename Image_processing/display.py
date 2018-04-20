@@ -27,8 +27,8 @@ img = Image.open(path)
 img_np = np.array(img)
 rows = img_np.shape[0]
 cols = img_np.shape[1]
-w = cols #700
-h = rows #500
+w = 700
+h = 500
 transform_x = w #600 #648 #how wide to scale the jpg when replaying
 transfrom_y = h #486 #how high to scale the jpg when replaying
 offset_x = 20 #how far off to left corner to display photos
@@ -36,7 +36,7 @@ offset_y = 10 #how far off to left corner to display photos
 
 try:
 	pygame.init()
-	screen = pygame.display.set_mode((w,h),pygame.FULLSCREEN)
+	screen = pygame.display.set_mode() #(w,h),pygame.FULLSCREEN)
 	pygame.display.set_caption('Photo Booth Pics')
 	pygame.mouse.set_visible(False) #hide the mouse cursor
 	#filename = image.jpg

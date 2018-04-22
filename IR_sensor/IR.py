@@ -26,7 +26,7 @@ if __name__ == '__main__':
     try:
         while True:
             return_result = IR_input()
-            print("return_result: "+return_result)
+            print("return_result: "+str(return_result))
             time.sleep(1)
 
             # Reset by pressing CTRL + C

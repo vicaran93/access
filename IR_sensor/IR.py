@@ -13,16 +13,20 @@ GPIO.setup(GPIO_TRIGGER, GPIO.IN,pull_up_down=GPIO.PUD_UP)
 
 
 def IR_input():
+    ''' Checks IR Sensor connected at GPIO 6. If response is 0, an ID has been detected, 1 otherwise. '''
 
     if GPIO.input(GPIO_TRIGGER) == 0:
         print("Trigger is 0!")
+        return 0
     else:
         print("Trigger is 1!")
+        return 1
 
 if __name__ == '__main__':
     try:
         while True:
-            IR_input()
+            return_result = IR_input()
+            print("return_result: "+return_result)
             time.sleep(1)
 
             # Reset by pressing CTRL + C

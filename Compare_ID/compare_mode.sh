@@ -37,21 +37,24 @@ python ./Image_processing/display.py $DATE # DISPLAY ORIGINAL IMAGE
 python ./Image_processing/crop.py $DATE
 
 DATE+=$'_cropped'
+python ./Image_processing/display.py $DATE # DISPLAY
 
 python ./Image_processing/img2bw.py $DATE # This does not deal with the artifacts encountered in the imgs
 #python image_processing.py $DATE
 #python ./Image_processing/ip_color_segmentation.py $DATE
-python ./Image_processing/display.py $DATE # DISPLAY CROPPED IMAGE
 
 DATE+=$'_bw'
+python ./Image_processing/display.py $DATE # DISPLAY BLACK AND WHITE IMAGE
+
 python ./Image_processing/average_white_test.py $DATE # Average white
 #python ./Image_processing/better_template.py $DATE #Hassaan code
 python ./Image_processing/crop_template.py $DATE # saves image as template.jpg
-python ./Image_processing/display.py $DATE # DISPLAY TEMPLATE
+
 
 #python ./Add_new_ID/add_coordinates.py 'location.txt' #assumming Hassaan's code creates this file
 
 NAME='template' # Hassaan's code saves template taken from $DATE as  template.png
+python ./Image_processing/display.py $NAME # DISPLAY TEMPLATE
 
 # Call add_ID.py  to upload TEMPLATE to the server and then to compare
 #python ./Add_new_ID/add_ID.py $NAME  # uploading through Heroku

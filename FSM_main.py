@@ -75,13 +75,11 @@ def main():
                 t1 = datetime.now()
                 ID = input("Please enter ID number (4 digits):")
                 subprocess.call(['bash', 'take_pic_and_convert_to_BW.sh', str(ID)])
-                #os.system('./take_pic_and_convert_to_BW.sh')
 
-                '''
                 # Get name of black and white image of the ID
                 ID_name = str(ID)+"_cropped_bw"
                 # run filter
-                filter_response =  1 #avg_white_filter.filter(ID_name)
+                filter_response =  True #avg_white_filter.filter(ID_name)
 
                 if filter_response == True :
 
@@ -90,14 +88,10 @@ def main():
                     else:
                         os.system('./compare_ID.sh')
 
-                    # if something goes wrong
-                        # red LEDs
-                    # else
-                        #Green LEDS
-                        # picture_flag=1
                 else:
                     #RED LEDs
-                '''
+                    os.system('python ../LEDs/showRed.py')
+
                 t2 = datetime.now()
                 delta = t2 - t1  # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
                 print("Total Runtime:" + str(delta.seconds) + " s")

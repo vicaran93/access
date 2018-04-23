@@ -1,9 +1,10 @@
 #!/usr/bin/python
 import RPi.GPIO as GPIO
-import os
+import os, sys
 from datetime import datetime,timedelta
-import display
-import IR #, avg_white_filter
+#import display
+sys.path.append(os.path.dirname(os.path.realpath(__file__)) + '/IR_sensor') #, avg_white_filter
+import IR
 import subprocess
 import time
 
@@ -12,9 +13,9 @@ import time
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(18, GPIO.IN) # EXIT BUTTON
 GPIO.setup(4, GPIO.IN)  # USER INPUT  compare
-#GPIO.setup(17, GPIO.IN) # NEW ID
+GPIO.setup(17, GPIO.IN) # NEW ID
 GPIO.add_event_detect(17, GPIO.RISING)# USER INPUT new ID
-#GPIO.setup(27, GPIO.IN) # RESET
+GPIO.setup(27, GPIO.IN) # RESET
 GPIO.add_event_detect(27, GPIO.RISING)# USER INPUT Reset
 GPIO_TRIGGER = 6
 GPIO.setup(GPIO_TRIGGER, GPIO.IN,pull_up_down=GPIO.PUD_UP) # set GPIO direction (IN / OUT)
@@ -44,7 +45,7 @@ def main():
     picture_taken = False
     picture_taken_SM = False
     new_ID_mode = 0
-    RESET = True
+    RESET = False
 
     # run every clock cycle
     while GPIO.input(18) == 0: # Blue button to break while loop
@@ -55,7 +56,7 @@ def main():
         new_ID_mode = change_when_positive_edge(17,new_ID_mode)#check positive edge on pin 17
         RESET = change_when_positive_edge(27,RESET) # positive edge of GPIO.input(27)
 
-        print("sensor_trigger: "+sensor_trigger+" user_trigger:"+user_trigger+" new_ID_mode:"+new_ID_mode+" RESET:"+RESET)
+        print("sensor_trigger: "+str(sensor_trigger)+" user_trigger:"+str(user_trigger)+" new_ID_mode:"+str(new_ID_mode)+" RESET:"+str(RESET))
         #continue
         if not RESET:
             # STATE 0:

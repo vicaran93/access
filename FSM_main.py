@@ -79,6 +79,9 @@ def main():
 
                 t1 = datetime.now()
                 ID = str(input("Please enter ID number (4 digits):"))
+                print(ID)
+                ID = str(ID).zfill(4)
+                print(ID)
                 subprocess.call(['bash', 'take_pic_and_convert_to_BW.sh', ID])
 
                 # Get name of black and white image of the ID

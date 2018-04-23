@@ -56,8 +56,8 @@ def main():
         new_ID_mode = change_when_positive_edge(17,new_ID_mode)#check positive edge on pin 17
         RESET = change_when_positive_edge(27,RESET) # positive edge of GPIO.input(27)
 
-        print("sensor_trigger: "+str(sensor_trigger)+" user_trigger:"+str(user_trigger)+" new_ID_mode:"+str(new_ID_mode)+" RESET:"+str(RESET))
-	time.sleep(1)  # pause
+        #print("sensor_trigger: "+str(sensor_trigger)+" user_trigger:"+str(user_trigger)+" new_ID_mode:"+str(new_ID_mode)+" RESET:"+str(RESET))
+	#time.sleep(1)  # pause
         #continue
         if not RESET:
             # STATE 0:
@@ -71,16 +71,17 @@ def main():
                 # Run program
                 print("STATE 1:")
                 print("ID inserted ->Running program")
-                '''
+
                 t1 = datetime.now()
                 ID = input("Please enter ID number (4 digits):")
                 subprocess.call(['bash', 'take_pic_and_convert_to_BW.sh', str(ID)])
                 #os.system('./take_pic_and_convert_to_BW.sh')
 
+                '''
                 # Get name of black and white image of the ID
                 ID_name = str(ID)+"_cropped_bw"
                 # run filter
-                filter_response = avg_white_filter.filter(ID_name)
+                filter_response =  1 #avg_white_filter.filter(ID_name)
 
                 if filter_response == True :
 
@@ -96,11 +97,11 @@ def main():
                         # picture_flag=1
                 else:
                     #RED LEDs
-
+                '''
                 t2 = datetime.now()
                 delta = t2 - t1  # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
-                '''
-                time.sleep(3)  # pause
+                print("Total Runtime:" + str(delta.seconds) + " s")
+
                 picture_taken = 1
 
             # STATE 2:

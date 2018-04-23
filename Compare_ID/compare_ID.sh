@@ -1,8 +1,6 @@
 #!/bin/bash
 
-echo "Passed Arg 1:$1"
-
-#DATE=$1
+#echo "Passed Arg 1:$1"
 IMAGENAME=$1
 
 python ./Image_processing/crop_template.py $IMAGENAME # saves image as template.jpg

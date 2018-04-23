@@ -9,11 +9,12 @@
 # Get user input
 #echo "Please enter ID number (4 digits):"
 #read DATE
-echo "Passed Arg 1:$1"
+
+#echo "Passed Arg 1:$1"
 
 DATE=$1
 # CHECK USER INPUT
-echo "Picture name: $DATE"
+#echo "Picture name: $DATE"
 if [[ -n ${DATE//[0-9]/} ]]
 then
     echo "Contains letters! Wrong ID"

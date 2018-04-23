@@ -21,10 +21,6 @@ GPIO_TRIGGER = 6
 GPIO.setup(GPIO_TRIGGER, GPIO.IN,pull_up_down=GPIO.PUD_UP) # set GPIO direction (IN / OUT)
 # x = GPIO.input(18)
 
-# GLOBAL VARIABLES
-min_threshold = 0.03
-max_threshold = 0.4
-first_time_in_S2 = True
 
 
 def change_when_positive_edge(pin, variable):
@@ -59,6 +55,11 @@ def main():
     picture_taken_SM = False
     new_ID_mode = False
     RESET = False
+
+    # GLOBAL VARIABLES
+    min_threshold = 0.03
+    max_threshold = 0.4
+    first_time_in_S2 = True
 
     # run every clock cycle
     while GPIO.input(18) == 0: # Blue button to break while loop

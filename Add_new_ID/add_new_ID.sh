@@ -1,8 +1,8 @@
 #!/bin/bash
 
-IMAGE_NAME=$1
+IMAGENAME=$1
 # upload image to the server
-python ./Add_new_ID/upload_RPi.py $IMAGE_NAME
+python ./Add_new_ID/upload_RPi.py $IMAGENAME
 
 # Delete all files
 #rm $DATE #remove black and white image

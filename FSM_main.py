@@ -14,9 +14,9 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(18, GPIO.IN) # EXIT BUTTON
 GPIO.setup(4, GPIO.IN)  # USER INPUT  compare
 GPIO.setup(17, GPIO.IN) # NEW ID
-GPIO.add_event_detect(17, GPIO.RISING)# USER INPUT new ID
+GPIO.add_event_detect(17, GPIO.RISING, bouncetime=1000)# USER INPUT new ID
 GPIO.setup(27, GPIO.IN) # RESET
-GPIO.add_event_detect(27, GPIO.RISING)# USER INPUT Reset
+GPIO.add_event_detect(27, GPIO.RISING,  bouncetime=1000)# USER INPUT Reset
 GPIO_TRIGGER = 6
 GPIO.setup(GPIO_TRIGGER, GPIO.IN,pull_up_down=GPIO.PUD_UP) # set GPIO direction (IN / OUT)
 # x = GPIO.input(18)
@@ -24,6 +24,7 @@ GPIO.setup(GPIO_TRIGGER, GPIO.IN,pull_up_down=GPIO.PUD_UP) # set GPIO direction 
 # GLOBAL VARIABLES
 min_threshold = 0.03
 max_threshold = 0.4
+first_time_in_S2 = True
 
 
 def change_when_positive_edge(pin, variable):
@@ -96,18 +97,12 @@ def main():
                 filter_passed = average_white_test.filter(min_threshold,max_threshold, ID_name)
                 print("filter_response: "+str(filter_passed))
                 if filter_passed:
-                    real_path = os.path.realpath(os.curdir)
                     if new_ID_mode:
-                        real_path = real_path+'/Add_new_ID/add_new_ID.sh'
-                        os.system(real_path)
+                        subprocess.call(['bash', './Add_new_ID/add_new_ID.sh', ID_name])
                     else:
-                        #real_path = real_path + '/Compare_ID/compare_ID.sh'
-                        #os.system(real_path)
-                        #os.system('./Compare_ID/compare_ID.sh')
                         subprocess.call(['bash', './Compare_ID/compare_ID.sh', ID_name])
 
                 else:
-                    #RED LEDs
                     os.system('python ./LEDs/showRed.py')
 
 
@@ -119,10 +114,14 @@ def main():
 
             # STATE 2:
             elif picture_taken:
-                print("STATE 2!")
-                time.sleep(1)  # pause
+
+                if first_time_in_S2:
+                    print("STATE 2!\nPlease take out the ID.")
+                    first_time_in_S2 = False
+
                 if sensor_trigger == 1 and user_trigger == 0: # ID out
                     picture_taken = 0 # transition to state 0
+                    first_time_in_S2 = True
 		    print_general_info = True
             else:
                 print("UNEXPECTED CASE")

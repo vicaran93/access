@@ -3,8 +3,9 @@ import RPi.GPIO as GPIO
 import os
 from datetime import datetime,timedelta
 import display
-import IR, avg_white_filter
+import IR #, avg_white_filter
 import subprocess
+import time
 
 # This method uses pin 18 to check its input; 10 times every second
 # initialize input pins
@@ -59,14 +60,16 @@ def main():
         if not RESET:
             # STATE 0:
             if sensor_trigger == 1 and user_trigger == 0 and not picture_taken:
-
+                print("STATE 0:")
                 if print_general_info:
                     print_general_info = False
                     print("Waiting for buttons to be pressed:\n1. First button (PIN4) to take a picture in 'compare mode' <sensor>.\n2. Second button (PIN17) to go into 'add new ID mode'. \n3. Test camera \n4. Test server communication \n5. EXIT/blue button (PIN18) to exit.")
             # STATE 1:
             elif (sensor_trigger == 0 or user_trigger == 1 ) and not picture_taken :
                 # Run program
-                print("Running program..")
+                print("STATE 1:")
+                print("ID inserted ->Running program")
+                '''
                 t1 = datetime.now()
                 ID = input("Please enter ID number (4 digits):")
                 subprocess.call(['bash', 'take_pic_and_convert_to_BW.sh', str(ID)])
@@ -94,13 +97,15 @@ def main():
 
                 t2 = datetime.now()
                 delta = t2 - t1  # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
-
+                '''
                 picture_taken = 1
 
             # STATE 2:
             elif picture_taken:
-
-                picture_taken = 0
+                print("STATE 2!")
+                time.sleep(3)  # pause
+                if sensor_trigger == 1 and user_trigger == 0: # ID out
+                    picture_taken = 0 # transition to state 0
             else:
                 print("UNEXPECTED CASE")
                 exit(0)

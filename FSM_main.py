@@ -3,17 +3,18 @@ import RPi.GPIO as GPIO
 import os
 from datetime import datetime,timedelta
 import display
-import IR
+import IR, avg_white_filter
+import subprocess
 
 # This method uses pin 18 to check its input; 10 times every second
 # initialize input pins
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(18, GPIO.IN) # EXIT BUTTON
-GPIO.setup(4, GPIO.IN)  # USER INPUT
+GPIO.setup(4, GPIO.IN)  # USER INPUT  compare
 #GPIO.setup(17, GPIO.IN) # NEW ID
-GPIO.add_event_detect(17, GPIO.RISING)# USER INPUT
+GPIO.add_event_detect(17, GPIO.RISING)# USER INPUT new ID
 #GPIO.setup(27, GPIO.IN) # RESET
-GPIO.add_event_detect(27, GPIO.RISING)# USER INPUT
+GPIO.add_event_detect(27, GPIO.RISING)# USER INPUT Reset
 GPIO_TRIGGER = 6
 GPIO.setup(GPIO_TRIGGER, GPIO.IN,pull_up_down=GPIO.PUD_UP) # set GPIO direction (IN / OUT)
 # x = GPIO.input(18)
@@ -23,6 +24,7 @@ GPIO.setup(GPIO_TRIGGER, GPIO.IN,pull_up_down=GPIO.PUD_UP) # set GPIO direction 
 
 def change_when_positive_edge(pin, variable):
     if GPIO.event_detected(pin):
+        print(" POSITIVE EDGE DETECTED")
         return not variable
     else:
         return variable
@@ -53,7 +55,7 @@ def main():
         RESET = change_when_positive_edge(27,RESET) # positive edge of GPIO.input(27)
 
         print("sensor_trigger: "+sensor_trigger+" user_trigger:"+user_trigger+" new_ID_mode:"+new_ID_mode+" RESET:"+RESET)
-        continue
+        #continue
         if not RESET:
             # STATE 0:
             if sensor_trigger == 1 and user_trigger == 0 and not picture_taken:
@@ -63,8 +65,38 @@ def main():
                     print("Waiting for buttons to be pressed:\n1. First button (PIN4) to take a picture in 'compare mode' <sensor>.\n2. Second button (PIN17) to go into 'add new ID mode'. \n3. Test camera \n4. Test server communication \n5. EXIT/blue button (PIN18) to exit.")
             # STATE 1:
             elif (sensor_trigger == 0 or user_trigger == 1 ) and not picture_taken :
+                # Run program
+                print("Running program..")
+                t1 = datetime.now()
+                ID = input("Please enter ID number (4 digits):")
+                subprocess.call(['bash', 'take_pic_and_convert_to_BW.sh', str(ID)])
+                #os.system('./take_pic_and_convert_to_BW.sh')
+
+                # Get name of black and white image of the ID
+                ID_name = str(ID)+"_cropped_bw"
+                # run filter
+                filter_response = avg_white_filter.filter(ID_name)
+
+                if filter_response == True :
+
+                    if new_ID_mode:
+                        os.system('./add_new_ID.sh')
+                    else:
+                        os.system('./compare_ID.sh')
+
+                    # if something goes wrong
+                        # red LEDs
+                    # else
+                        #Green LEDS
+                        # picture_flag=1
+                else:
+                    #RED LEDs
+
+                t2 = datetime.now()
+                delta = t2 - t1  # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
 
                 picture_taken = 1
+
             # STATE 2:
             elif picture_taken:
 

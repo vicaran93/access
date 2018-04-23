@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46b778e6-1966-45fe-9548-75ad97d0a50b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FSM_main.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/take_pic_and_convert_to_BW.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/access.iml" afterPath="$PROJECT_DIR$/.idea/access.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
@@ -20,6 +20,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Compare_ID/compare_mode.sh" afterPath="$PROJECT_DIR$/Compare_ID/compare_mode.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Compare_ID/compare_mode2.sh" afterPath="$PROJECT_DIR$/Compare_ID/compare_mode2.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Distance_sensor/get_distance.py" afterPath="$PROJECT_DIR$/Distance_sensor/get_distance.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FSM_main.py" afterPath="$PROJECT_DIR$/FSM_main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IR_sensor/IR.py" afterPath="$PROJECT_DIR$/IR_sensor/IR.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Image_processing/average_white_test.py" afterPath="$PROJECT_DIR$/Image_processing/average_white_test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Image_processing/better_template.py" afterPath="$PROJECT_DIR$/Image_processing/better_template.py" />
@@ -98,34 +99,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="compare_mode.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Compare_ID/compare_mode.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FSM_main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FSM_main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FSM_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+            <state relative-caret-position="272">
+              <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
               <folding>
                 <element signature="e#18#41#0" expanded="true" />
-                <element signature="e#1782#2552#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="take_pic_and_convert_to_BW.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/take_pic_and_convert_to_BW.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="799">
+              <caret line="47" column="33" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="compare_mode.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Compare_ID/compare_mode.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="731">
+              <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="compare.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Compare_ID/compare.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
+            <state relative-caret-position="1133">
+              <caret line="91" column="7" selection-start-line="91" selection-start-column="7" selection-end-line="91" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -181,7 +201,6 @@
         <option value="$PROJECT_DIR$/Compare_ID/compare_mode2.sh" />
         <option value="$PROJECT_DIR$/LEDs/LED_and_pic2.py" />
         <option value="$PROJECT_DIR$/Image_processing/crop_new.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/LEDs/LED_and_pic.py" />
         <option value="$PROJECT_DIR$/Image_processing/better_template.py" />
         <option value="$PROJECT_DIR$/Add_new_ID/add_coordinates.py" />
@@ -196,7 +215,9 @@
         <option value="$PROJECT_DIR$/Add_new_ID/add_new_ID_mode.sh" />
         <option value="$PROJECT_DIR$/Compare_ID/compare_mode.sh" />
         <option value="$PROJECT_DIR$/IR_sensor/IR.py" />
+        <option value="$PROJECT_DIR$/take_pic_and_convert_to_BW.sh" />
         <option value="$PROJECT_DIR$/FSM_main.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -260,7 +281,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LEDs" />
+              <option name="myItemId" value="Compare_ID" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -479,12 +500,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/add_ID.py" />
     <entry file="file://$PROJECT_DIR$/checkInput.py" />
     <entry file="file://$PROJECT_DIR$/crop.py" />
     <entry file="file://$PROJECT_DIR$/takepic.sh" />
@@ -532,13 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Compare_ID/compare.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -675,14 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Compare_ID/compare_mode.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LEDs/LED_and_pic2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -701,22 +706,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/Compare_ID/compare.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
+        <state relative-caret-position="255">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Compare_ID/compare_mode.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/take_pic_and_convert_to_BW.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="33" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FSM_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
           <folding>
             <element signature="e#18#41#0" expanded="true" />
-            <element signature="e#1782#2552#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1133">
+          <caret line="91" column="7" selection-start-line="91" selection-start-column="7" selection-end-line="91" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>

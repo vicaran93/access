@@ -10,8 +10,8 @@ GPIO.setup(18, GPIO.IN)
 GPIO.setup(4, GPIO.IN)
 GPIO.setup(17, GPIO.IN)
 GPIO.setup(27, GPIO.IN)
-GPIO.setup(23, GPIO.IN)
-GPIO.setup(24, GPIO.IN)
+#GPIO.setup(23, GPIO.IN)
+#GPIO.setup(24, GPIO.IN)
 
 # x = GPIO.input(18)
 # print(x)
@@ -70,6 +70,7 @@ while GPIO.input(18) == 0: # Blue button to break while loop
     #        print("Third button (PIN27) pressed.")
             #print("Picture was taken")
     #        once = False
+    '''
     if GPIO.input(23) == 1: # test camera
 	if once:
             print("Test: Camera (PIN23)")
@@ -88,7 +89,7 @@ while GPIO.input(18) == 0: # Blue button to break while loop
             flag = 0
 	    flag2 = True
 
-
+    '''
     if flag == 0:
             once = True
             flag = 1

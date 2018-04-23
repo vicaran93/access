@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 IMAGE_NAME=$1
 # upload image to the server

@@ -58,7 +58,9 @@ with open(file_path, 'rb') as data:
     )
 # Upload image:
 if len(sys.argv) == 3: # two inputs
-    file_name = file_name+template_number+".jpg"
+    file_name = file_name+template_number
+
+file_name = file_name+".jpg"
 
 
 with open(file_path, 'rb') as data:

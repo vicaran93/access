@@ -95,6 +95,7 @@ def main():
                     else:
                         real_path = real_path + '/Compare_ID/compare_ID.sh'
                         os.system(real_path)
+                        os.system('./Compare_ID/compare_ID.sh')
 
                 else:
                     #RED LEDs

@@ -90,11 +90,13 @@ def main():
                 filter_response =  True #avg_white_filter.filter(ID_name)
 
                 if filter_response == True :
-
+                    real_path = os.path.realpath(__file__)
                     if new_ID_mode:
-                        os.system('./Add_new_ID/add_new_ID.sh')
+                        real_path = real_path+'/Add_new_ID/add_new_ID.sh'
+                        os.system(real_path)
                     else:
-                        os.system('./Compare_ID/compare_ID.sh')
+                        real_path = real_path + '/Compare_ID/compare_ID.sh'
+                        os.system(real_path)
 
                 else:
                     #RED LEDs

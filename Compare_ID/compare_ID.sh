@@ -13,7 +13,7 @@ python ./Image_processing/crop_template.py $IMAGENAME # saves image as template.
 NAME='template' # Hassaan's code saves template taken from $DATE as  template.png
 python ./Image_processing/display.py $NAME # DISPLAY TEMPLATE
 python ./Add_new_ID/upload_RPi.py $NAME
-python ./Compare_ID/compare.py $IMAGENAME
+python ./Compare_ID/compare_improved.py $IMAGENAME
 
 # DELETE IMAGES IN RPi
 

@@ -85,7 +85,7 @@ def main():
                 # Get name of black and white image of the ID
                 ID_name = str(ID)+"_cropped_bw"
                 # run filter
-                filter_response =  True #avg_white_filter.filter(ID_name)
+                filter_response =  True #avg_white_filter(ID_name)
 
                 if filter_response == True :
                     real_path = os.path.realpath(os.curdir)

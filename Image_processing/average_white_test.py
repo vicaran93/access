@@ -16,6 +16,18 @@ def average_white(img):
     #print("AVR:"+str(avr))
     return avr
 
+def filter(min_range, max_range, path):
+    '''
+    :param min_range: Lower bound of the filter  (average
+    :param max_range: upper bound of the filter
+    :param path: Path to image where we want to run the filter on
+    :return: True if it passes the image average white pixels is in between the range, False otherwise
+    '''
+    img = Image.open(path)
+    avr_w  = average_white(img)
+
+    if min_range < avr_w < max_range:
+        pass
 
 
 def main():

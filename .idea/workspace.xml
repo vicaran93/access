@@ -18,6 +18,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Add_new_ID/upload_RPi.py" afterPath="$PROJECT_DIR$/Add_new_ID/upload_RPi.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Compare_ID/compare.py" afterPath="$PROJECT_DIR$/Compare_ID/compare.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Compare_ID/compare_ID.sh" afterPath="$PROJECT_DIR$/Compare_ID/compare_ID.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Compare_ID/compare_improved.py" afterPath="$PROJECT_DIR$/Compare_ID/compare_improved.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Compare_ID/compare_mode.sh" afterPath="$PROJECT_DIR$/Compare_ID/compare_mode.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Compare_ID/compare_mode2.sh" afterPath="$PROJECT_DIR$/Compare_ID/compare_mode2.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Distance_sensor/get_distance.py" afterPath="$PROJECT_DIR$/Distance_sensor/get_distance.py" />
@@ -67,11 +68,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FSM_main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FSM_main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FSM_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="98" column="86" selection-start-line="98" selection-start-column="86" selection-end-line="98" selection-end-column="86" />
+            <state relative-caret-position="102">
+              <caret line="87" column="66" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="66" />
               <folding>
                 <element signature="e#18#41#0" expanded="true" />
               </folding>
@@ -79,10 +80,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="average_white_test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Image_processing/average_white_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="upload_RPi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Add_new_ID/upload_RPi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
+            <state relative-caret-position="129">
               <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
               <folding />
             </state>
@@ -93,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/Compare_ID/compare_ID.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -102,7 +113,7 @@
       <file leaf-file-name="add_ID.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Add_new_ID/add_ID.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
+            <state relative-caret-position="348">
               <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
               <folding />
             </state>
@@ -129,10 +140,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="display.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Image_processing/display.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="take_pic_and_convert_to_BW.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/take_pic_and_convert_to_BW.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
+            <state relative-caret-position="238">
               <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
               <folding />
             </state>
@@ -142,7 +163,7 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
+            <state relative-caret-position="493">
               <caret line="31" column="53" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="53" />
               <folding />
             </state>
@@ -190,12 +211,10 @@
         <option value="$PROJECT_DIR$/Image_processing/better_template.py" />
         <option value="$PROJECT_DIR$/Add_new_ID/add_coordinates.py" />
         <option value="$PROJECT_DIR$/Image_processing/ip_color_segmentation.py" />
-        <option value="$PROJECT_DIR$/Image_processing/average_white_test.py" />
         <option value="$PROJECT_DIR$/Image_processing/crop.py" />
         <option value="$PROJECT_DIR$/Image_processing/crop_template.py" />
         <option value="$PROJECT_DIR$/Distance_sensor/get_distance.py" />
         <option value="$PROJECT_DIR$/Image_processing/img2bw.py" />
-        <option value="$PROJECT_DIR$/Image_processing/display.py" />
         <option value="$PROJECT_DIR$/Add_new_ID/add_new_ID_mode.sh" />
         <option value="$PROJECT_DIR$/Compare_ID/compare_mode.sh" />
         <option value="$PROJECT_DIR$/IR_sensor/IR.py" />
@@ -206,6 +225,8 @@
         <option value="$PROJECT_DIR$/Add_new_ID/add_new_ID.sh" />
         <option value="$PROJECT_DIR$/Compare_ID/compare_ID.sh" />
         <option value="$PROJECT_DIR$/FSM_main.py" />
+        <option value="$PROJECT_DIR$/Image_processing/display.py" />
+        <option value="$PROJECT_DIR$/Image_processing/average_white_test.py" />
       </list>
     </option>
   </component>
@@ -240,6 +261,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -269,13 +291,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Compare_ID" />
+              <option name="myItemId" value="Image_processing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -616,23 +637,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Image_processing/average_white_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#1#22#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Image_processing/better_template.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
           <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -647,7 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="16" column="14" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -655,19 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="e#12#35#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Image_processing/display.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#11#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -675,9 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="12" column="19" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#23#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -685,9 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#23#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -695,7 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="59">
           <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -703,14 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Add_new_ID/add_ID.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -723,6 +702,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="31" column="53" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/take_pic_and_convert_to_BW.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FSM_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="87" column="66" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="66" />
+          <folding>
+            <element signature="e#18#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Compare_ID/compare_mode.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -731,26 +736,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/Image_processing/display.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="31" column="53" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="53" />
+        <state relative-caret-position="181">
+          <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/take_pic_and_convert_to_BW.sh">
+    <entry file="file://$PROJECT_DIR$/Add_new_ID/add_ID.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Add_new_ID/upload_RPi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+        <state relative-caret-position="348">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -758,18 +755,24 @@
     <entry file="file://$PROJECT_DIR$/Compare_ID/compare_ID.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FSM_main.py">
+    <entry file="file://$PROJECT_DIR$/Add_new_ID/upload_RPi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="98" column="86" selection-start-line="98" selection-start-column="86" selection-end-line="98" selection-end-column="86" />
-          <folding>
-            <element signature="e#18#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="129">
+          <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Image_processing/average_white_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

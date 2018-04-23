@@ -36,7 +36,7 @@ offset_y = 10 #how far off to left corner to display photos
 
 try:
 	pygame.init()
-	screen = pygame.display.set_mode(pygame.FULLSCREEN) #(w,h),pygame.FULLSCREEN)
+	screen = pygame.display.set_mode() #(w,h),pygame.FULLSCREEN)
 	pygame.display.set_caption(file_name)
 	#pygame.mouse.set_visible(False) #hide the mouse cursor
 	#filename = image.jpg

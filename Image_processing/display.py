@@ -36,9 +36,9 @@ offset_y = 10 #how far off to left corner to display photos
 
 try:
 	pygame.init()
-	screen = pygame.display.set_mode() #(w,h),pygame.FULLSCREEN)
-	pygame.display.set_caption('Photo Booth Pics')
-	pygame.mouse.set_visible(False) #hide the mouse cursor
+	screen = pygame.display.set_mode(pygame.FULLSCREEN) #(w,h),pygame.FULLSCREEN)
+	pygame.display.set_caption(file_name)
+	#pygame.mouse.set_visible(False) #hide the mouse cursor
 	#filename = image.jpg
 	img=pygame.image.load(path) #filename
 	img = pygame.transform.scale(img,(transform_x,transfrom_y))

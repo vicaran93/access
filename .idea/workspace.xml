@@ -67,11 +67,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FSM_main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FSM_main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FSM_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="97" column="61" selection-start-line="97" selection-start-column="61" selection-end-line="97" selection-end-column="61" />
+            <state relative-caret-position="238">
+              <caret line="98" column="86" selection-start-line="98" selection-start-column="86" selection-end-line="98" selection-end-column="86" />
               <folding>
                 <element signature="e#18#41#0" expanded="true" />
               </folding>
@@ -89,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="compare_ID.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="compare_ID.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Compare_ID/compare_ID.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            <state relative-caret-position="255">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -204,8 +204,8 @@
         <option value="$PROJECT_DIR$/Add_new_ID/upload_RPi.py" />
         <option value="$PROJECT_DIR$/Compare_ID/compare.py" />
         <option value="$PROJECT_DIR$/Add_new_ID/add_new_ID.sh" />
-        <option value="$PROJECT_DIR$/FSM_main.py" />
         <option value="$PROJECT_DIR$/Compare_ID/compare_ID.sh" />
+        <option value="$PROJECT_DIR$/FSM_main.py" />
       </list>
     </option>
   </component>
@@ -739,13 +739,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FSM_main.py">
+    <entry file="file://$PROJECT_DIR$/take_pic_and_convert_to_BW.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="97" column="61" selection-start-line="97" selection-start-column="61" selection-end-line="97" selection-end-column="61" />
-          <folding>
-            <element signature="e#18#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-170">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -757,19 +755,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/take_pic_and_convert_to_BW.sh">
+    <entry file="file://$PROJECT_DIR$/Compare_ID/compare_ID.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        <state relative-caret-position="255">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Compare_ID/compare_ID.sh">
+    <entry file="file://$PROJECT_DIR$/FSM_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="238">
+          <caret line="98" column="86" selection-start-line="98" selection-start-column="86" selection-end-line="98" selection-end-column="86" />
+          <folding>
+            <element signature="e#18#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

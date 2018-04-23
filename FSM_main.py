@@ -93,9 +93,10 @@ def main():
                         real_path = real_path+'/Add_new_ID/add_new_ID.sh'
                         os.system(real_path)
                     else:
-                        real_path = real_path + '/Compare_ID/compare_ID.sh'
-                        os.system(real_path)
-                        os.system('./Compare_ID/compare_ID.sh')
+                        #real_path = real_path + '/Compare_ID/compare_ID.sh'
+                        #os.system(real_path)
+                        #os.system('./Compare_ID/compare_ID.sh')
+                        subprocess.call(['bash', './Compare_ID/compare_ID.sh', ID_name])
 
                 else:
                     #RED LEDs

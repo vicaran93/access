@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # This shell script will take a picture using the RPi camera and then it will
 # save the image in the "camera" folder.
 # Image is cropped using crop.py script and converted to black and white
@@ -10,9 +9,9 @@
 # Get user input
 #echo "Please enter ID number (4 digits):"
 #read DATE
-echo "Passed Arg 1:"$1
+echo "Passed Arg 1:$1"
 
-DATE = $1
+DATE=$1
 # CHECK USER INPUT
 echo "Picture name: $DATE"
 if [[ -n ${DATE//[0-9]/} ]]

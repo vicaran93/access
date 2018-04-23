@@ -25,8 +25,13 @@ GPIO.setup(GPIO_TRIGGER, GPIO.IN,pull_up_down=GPIO.PUD_UP) # set GPIO direction 
 
 
 def change_when_positive_edge(pin, variable):
+
     if GPIO.event_detected(pin):
         print(" POSITIVE EDGE DETECTED")
+        if pin == 17:
+            print("Changing new_ID_mode to:"+str(not variable))
+        if pin == 27:
+            print("Changing RESET to:"+str(not variable))
         return not variable
     else:
         return variable
@@ -44,7 +49,7 @@ def main():
     print_general_info_SM = True
     picture_taken = False
     picture_taken_SM = False
-    new_ID_mode = 0
+    new_ID_mode = False
     RESET = False
 
     # run every clock cycle
@@ -84,9 +89,9 @@ def main():
                 if filter_response == True :
 
                     if new_ID_mode:
-                        os.system('./add_new_ID.sh')
+                        os.system('./Add_new_ID/add_new_ID.sh')
                     else:
-                        os.system('./compare_ID.sh')
+                        os.system('./Compare_ID/compare_ID.sh')
 
                 else:
                     #RED LEDs

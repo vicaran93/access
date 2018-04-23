@@ -56,8 +56,7 @@ def main():
         new_ID_mode = change_when_positive_edge(17,new_ID_mode)#check positive edge on pin 17
         RESET = change_when_positive_edge(27,RESET) # positive edge of GPIO.input(27)
 
-        print("sensor_trigger: "+str(sensor_trigger)+" user_trigger:"+str(user_trigger)+" new_ID_mode:"+str(new_ID_mode)+" RESET:"+str(RESET))
-	time.sleep(1)  # pause
+        #print("sensor_trigger: "+str(sensor_trigger)+" user_trigger:"+str(user_trigger)+" new_ID_mode:"+str(new_ID_mode)+" RESET:"+str(RESET))
         #continue
         if not RESET:
             # STATE 0:
@@ -108,9 +107,8 @@ def main():
                 print("STATE 2!")
                 time.sleep(1)  # pause
                 if sensor_trigger == 1 and user_trigger == 0: # ID out
-		    print("here")
                     picture_taken = 0 # transition to state 0
-		    print_general_info = True
+                    print_general_info = True
             else:
                 print("UNEXPECTED CASE")
                 exit(0)

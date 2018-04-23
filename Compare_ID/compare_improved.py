@@ -45,9 +45,9 @@ if response.text[0] == "I":  # Image received...
     print("We got response back.Show green LED!")
     # os.system('python test.py %s' % response.text);
     # os.system('%s %s' % ('ls', '-l'))
-    os.system('python ../LEDs/showGreen.py')
+    os.system('python ./LEDs/showGreen.py') # from Main or FSM_main - from this file :../LEDs/showGreen.py
 elif response.text[0] == "E":  # Eror detected...
     print("We got an error as a response. Show red LED!")
-    os.system('python ../LEDs/showRed.py')
+    os.system('python ./LEDs/showRed.py')  # from Main or FSM_main - from this file :../LEDs/showGreen.py
 print(response.status_code, response.reason)  # HTTP
 print("------------------------ Done ------------------------")

@@ -1,12 +1,12 @@
 #!/usr/bin/python
 import RPi.GPIO as GPIO
-import os, sys
+import os, sys, subprocess, time
 from datetime import datetime,timedelta
 #import display
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + '/IR_sensor') #, avg_white_filter
 import IR
-import subprocess
-import time
+sys.path.append(os.path.dirname(os.path.realpath(__file__)) + '/Image_processing') #, avg_white_filter
+import average_white_test
 
 # This method uses pin 18 to check its input; 10 times every second
 # initialize input pins
@@ -20,8 +20,10 @@ GPIO.add_event_detect(27, GPIO.RISING)# USER INPUT Reset
 GPIO_TRIGGER = 6
 GPIO.setup(GPIO_TRIGGER, GPIO.IN,pull_up_down=GPIO.PUD_UP) # set GPIO direction (IN / OUT)
 # x = GPIO.input(18)
-# print(x)
 
+# GLOBAL VARIABLES
+min_threshold = 0.03
+max_threshold = 0.4
 
 
 def change_when_positive_edge(pin, variable):
@@ -30,20 +32,25 @@ def change_when_positive_edge(pin, variable):
         print(" POSITIVE EDGE DETECTED")
         if pin == 17:
             print("Changing new_ID_mode to:"+str(not variable))
+            if not variable:
+                print("-> SYSTEM ENTERING NEW ID MODE")
+            else:
+                print("-> SYSTEM EXITING NEW ID MODE")
         if pin == 27:
             print("Changing RESET to:"+str(not variable))
+            if not variable:
+                print("-> SYSTEM DISABLING IR SENSOR")
+            else:
+                print("-> SYSTEM ENABLING IR SENSOR")
         return not variable
     else:
         return variable
 
 def main():
-
-    once = True
-    flag2 = True
-    flag=1 # do not init to 1 or 0
-
-
-    ''' Applying FSM using IR sensor. This system also implements a RESET functionality to avoid the case where the IR sensor stops working'''
+    '''
+        Applying FSM using IR sensor. This system also implements a RESET functionality to avoid the case where
+        the IR sensor stops working
+    '''
     # INITIALIZATION
     print_general_info = True
     print_general_info_SM = True
@@ -62,7 +69,7 @@ def main():
         RESET = change_when_positive_edge(27,RESET) # positive edge of GPIO.input(27)
 
         #print("sensor_trigger: "+str(sensor_trigger)+" user_trigger:"+str(user_trigger)+" new_ID_mode:"+str(new_ID_mode)+" RESET:"+str(RESET))
-	#time.sleep(1)  # pause
+	    #time.sleep(1)  # pause
         #continue
         if not RESET:
             # STATE 0:
@@ -70,7 +77,7 @@ def main():
                 if print_general_info:
                     print("STATE 0:")
                     print_general_info = False
-                    print("Waiting for buttons to be pressed:\n1. First button (PIN4) to take a picture in 'compare mode' <sensor>.\n2. Second button (PIN17) to go into 'add new ID mode'. \n3. Test camera \n4. Test server communication \n5. EXIT/blue button (PIN18) to exit.")
+                    print("System ON:\n1. Check ID -> 'compare mode'.\n2. Add ID --> 'new ID mode'. \n3. RESET \n5. EXIT (blue button)")
             # STATE 1:
             elif (sensor_trigger == 0 or user_trigger == 1 ) and not picture_taken :
                 # Run program
@@ -78,6 +85,7 @@ def main():
                 print("ID inserted ->Running program")
 
                 t1 = datetime.now()
+
                 ID = str(input("Please enter ID number (4 digits):"))
                 ID = str(ID).zfill(4)
                 subprocess.call(['bash', 'take_pic_and_convert_to_BW.sh', ID])
@@ -85,9 +93,9 @@ def main():
                 # Get name of black and white image of the ID
                 ID_name = str(ID)+"_cropped_bw"
                 # run filter
-                filter_response =  True #avg_white_filter(ID_name)
-
-                if filter_response == True :
+                filter_passed = average_white_test.filter(min_threshold,max_threshold, ID_name)
+                print("filter_response: "+str(filter_passed))
+                if filter_passed:
                     real_path = os.path.realpath(os.curdir)
                     if new_ID_mode:
                         real_path = real_path+'/Add_new_ID/add_new_ID.sh'
@@ -100,7 +108,8 @@ def main():
 
                 else:
                     #RED LEDs
-                    os.system('python ../LEDs/showRed.py')
+                    os.system('python ./LEDs/showRed.py')
+
 
                 t2 = datetime.now()
                 delta = t2 - t1  # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
@@ -113,7 +122,6 @@ def main():
                 print("STATE 2!")
                 time.sleep(1)  # pause
                 if sensor_trigger == 1 and user_trigger == 0: # ID out
-		    print("here")
                     picture_taken = 0 # transition to state 0
 		    print_general_info = True
             else:

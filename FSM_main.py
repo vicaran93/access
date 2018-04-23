@@ -78,8 +78,8 @@ def main():
                 print("ID inserted ->Running program")
 
                 t1 = datetime.now()
-                ID = input("Please enter ID number (4 digits):")
-                subprocess.call(['bash', 'take_pic_and_convert_to_BW.sh', str(ID)])
+                ID = str(input("Please enter ID number (4 digits):"))
+                subprocess.call(['bash', 'take_pic_and_convert_to_BW.sh', ID])
 
                 # Get name of black and white image of the ID
                 ID_name = str(ID)+"_cropped_bw"

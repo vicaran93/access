@@ -61,8 +61,8 @@ def main():
         if not RESET:
             # STATE 0:
             if sensor_trigger == 1 and user_trigger == 0 and not picture_taken:
-                print("STATE 0:")
                 if print_general_info:
+                    print("STATE 0:")
                     print_general_info = False
                     print("Waiting for buttons to be pressed:\n1. First button (PIN4) to take a picture in 'compare mode' <sensor>.\n2. Second button (PIN17) to go into 'add new ID mode'. \n3. Test camera \n4. Test server communication \n5. EXIT/blue button (PIN18) to exit.")
             # STATE 1:
@@ -99,12 +99,13 @@ def main():
                 t2 = datetime.now()
                 delta = t2 - t1  # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
                 '''
+                time.sleep(3)  # pause
                 picture_taken = 1
 
             # STATE 2:
             elif picture_taken:
                 print("STATE 2!")
-                time.sleep(3)  # pause
+                time.sleep(1)  # pause
                 if sensor_trigger == 1 and user_trigger == 0: # ID out
                     picture_taken = 0 # transition to state 0
             else:
@@ -115,13 +116,14 @@ def main():
             if user_trigger == 0 :
                 if print_general_info_SM:
                     print_general_info_SM = False
-                    print("<< SAFE MODE >>")
+                    print("<< SAFE MODE >>\nSTATE 3:\n")
                     print("Waiting for buttons to be pressed:\n1. Check ID -> 'compare mode'.\n2. Add ID --> 'new ID mode'. \n3. RESET \n5. EXIT (blue button)")
 
             # STATE 4
             elif user_trigger == 1 and not picture_taken_SM:
                 # execute main program
                 print("STATE 4: RUN PROGRAM")
+                time.sleep(3)  # pause
                 picture_taken_SM = True
                 print_general_info_SM = True
     print("Blue button (PIN18) was pressed. Program finished.")

@@ -42,6 +42,26 @@ def change_when_positive_edge(pin, variable):
         return not variable
     else:
         return variable
+def main_function(min_threshold,max_threshold,new_ID_mode):
+
+    ID = str(raw_input("Please enter ID number (4 digits):"))
+    ID = str(ID).zfill(4)
+    subprocess.call(['bash', 'take_pic_and_convert_to_BW.sh', ID])
+
+    # Get name of black and white image of the ID
+    ID_name = str(ID) + "_cropped_bw"
+    # run filter
+    filter_passed = average_white_test.filter(min_threshold, max_threshold, ID_name)
+    print("filter_response: " + str(filter_passed))
+    if filter_passed:
+        if new_ID_mode:
+            subprocess.call(['bash', './Add_new_ID/add_new_ID.sh', ID_name])
+        else:
+            subprocess.call(['bash', './Compare_ID/compare_ID.sh', ID_name])
+
+    else:
+        os.system('python ./LEDs/showRed.py')
+
 
 def main():
     '''
@@ -88,24 +108,7 @@ def main():
 
                 t1 = datetime.now()
 
-                ID = str(raw_input("Please enter ID number (4 digits):"))
-                ID = str(ID).zfill(4)
-                subprocess.call(['bash', 'take_pic_and_convert_to_BW.sh', ID])
-
-                # Get name of black and white image of the ID
-                ID_name = str(ID)+"_cropped_bw"
-                # run filter
-                filter_passed = average_white_test.filter(min_threshold,max_threshold, ID_name)
-                print("filter_response: "+str(filter_passed))
-                if filter_passed:
-                    if new_ID_mode:
-                        subprocess.call(['bash', './Add_new_ID/add_new_ID.sh', ID_name])
-                    else:
-                        subprocess.call(['bash', './Compare_ID/compare_ID.sh', ID_name])
-
-                else:
-                    os.system('python ./LEDs/showRed.py')
-
+                main_function(min_threshold, max_threshold, new_ID_mode)
 
                 t2 = datetime.now()
                 delta = t2 - t1  # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
@@ -140,8 +143,16 @@ def main():
             # STATE 4
             elif user_trigger == 1 and not picture_taken_SM:
                 # execute main program
-                print("STATE 4: RUN PROGRAM")
-                time.sleep(3)  # pause
+                print("STATE 4: ")
+
+                t1 = datetime.now()
+
+                main_function(min_threshold, max_threshold, new_ID_mode)
+
+                t2 = datetime.now()
+                delta = t2 - t1  # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
+                print("Total Runtime:" + str(delta.seconds) + " s")
+
                 picture_taken_SM = True
                 print_general_info_SM = True
     print("Blue button (PIN18) was pressed. Program finished.")

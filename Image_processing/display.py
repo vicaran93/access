@@ -29,21 +29,21 @@ rows = img_np.shape[0]
 cols = img_np.shape[1]
 w = 700
 h = 500
-transform_x = w #600 #648 #how wide to scale the jpg when replaying
-transfrom_y = h #486 #how high to scale the jpg when replaying
-offset_x = 20 #how far off to left corner to display photos
-offset_y = 10 #how far off to left corner to display photos
+transform_x = 1280 #w #600 #648 #how wide to scale the jpg when replaying
+transform_y = 1024 #h #486 #how high to scale the jpg when replaying
+offset_x = 0 #20 #how far off to left corner to display photos
+offset_y = 0 # 10 #how far off to left corner to display photos
 
 try:
 	pygame.init()
-	screen = pygame.display.set_mode() #(w,h),pygame.FULLSCREEN)
+	screen = pygame.display.set_mode((transform_x,transform_y),FULLSCREEN) #(w,h),pygame.FULLSCREEN)
 	pygame.display.set_caption(file_name)
-	#pygame.mouse.set_visible(False) #hide the mouse cursor
+	pygame.mouse.set_visible(False) #hide the mouse cursor
 	#filename = image.jpg
 	img=pygame.image.load(path) #filename
-	#img = pygame.transform.scale(img,(transform_x,transfrom_y))
-	#screen.blit(img,(offset_x,offset_y))
-	#pygame.display.flip() # update the display
+	img = pygame.transform.scale(img,(transform_x,transform_y))
+	screen.blit(img,(offset_x,offset_y))
+	pygame.display.flip() # update the display
 	time.sleep(3) # pause
 finally:
 	pygame.quit()

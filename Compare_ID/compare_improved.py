@@ -31,23 +31,26 @@ response = requests.post(final_url, data = {'file_name':image_name})
 
 print("\n--> SERVER RESPONSE:\n" + response.text)  # TEXT/HTML
 
-''' WRITE DATA TO info.txt
+''' WRITE DATA TO info.txt '''
 lines = response.text.split('\n')
-info = lines[-5:-1]
-info.append(lines[-1])
+info = lines[-16:-4]
+#info.append(lines[-1])
 with open(path + 'info.txt', 'a') as out_file:
     for line in info:
         out_file.write(line + '\n')
-'''
 
-if response.text[0] == "I":  # Image received...
-    pass
-    print("We got response back.Show green LED!")
+check = lines[-3]
+print("check is: "+str(check))
+if response.text[0] == "I" and check[0] == "Y":  # Image received...
+    print("We got match. Show green LED!")
     # os.system('python test.py %s' % response.text);
     # os.system('%s %s' % ('ls', '-l'))
     os.system('python ./LEDs/showGreen.py') # from Main or FSM_main - from this file :../LEDs/showGreen.py
 elif response.text[0] == "E":  # Eror detected...
     print("We got an error as a response. Show red LED!")
     os.system('python ./LEDs/showRed.py')  # from Main or FSM_main - from this file :../LEDs/showGreen.py
+elif check[0] == "N":
+	print("NO MATCH!")
+	os.system('python ./LEDs/showRed.py')  # from Main or FSM_main - from this file :../LEDs/showGreen.py
 print(response.status_code, response.reason)  # HTTP
 print("------------------------ Done ------------------------")

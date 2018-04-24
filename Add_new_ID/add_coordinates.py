@@ -12,7 +12,7 @@ t1 = datetime.now()
 
 # Path variables
 path="/home/pi/Documents/access/camera/"
-file_name="location.txt" 
+file_name="info.txt" 
 final_path=path+file_name
 
 

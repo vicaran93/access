@@ -77,8 +77,8 @@ def main():
     RESET = False
 
     # GLOBAL VARIABLES
-    min_threshold = 0.03
-    max_threshold = 0.4
+    min_threshold = 0.01
+    max_threshold = 0.2
     first_time_in_S2 = True
 
     # run every clock cycle

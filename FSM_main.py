@@ -123,6 +123,8 @@ def main():
                 if sensor_trigger == 1 and user_trigger == 0: # ID out
                     picture_taken = 0 # transition to state 0
                     first_time_in_S2 = True
+                    new_ID_mode = False
+                    time.sleep(1)  # take a pause before transitioning to state 0 in case ID triggers sensor while removing it
 		    print_general_info = True
             else:
                 print("UNEXPECTED CASE")

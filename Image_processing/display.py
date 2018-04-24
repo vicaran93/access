@@ -41,9 +41,9 @@ try:
 	#pygame.mouse.set_visible(False) #hide the mouse cursor
 	#filename = image.jpg
 	img=pygame.image.load(path) #filename
-	img = pygame.transform.scale(img,(transform_x,transfrom_y))
-	screen.blit(img,(offset_x,offset_y))
-	pygame.display.flip() # update the display
+	#img = pygame.transform.scale(img,(transform_x,transfrom_y))
+	#screen.blit(img,(offset_x,offset_y))
+	#pygame.display.flip() # update the display
 	time.sleep(3) # pause
 finally:
 	pygame.quit()

@@ -71,8 +71,8 @@
       <file leaf-file-name="FSM_main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FSM_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="123" column="26" selection-start-line="123" selection-start-column="26" selection-end-line="123" selection-end-column="26" />
+            <state relative-caret-position="83">
+              <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
               <folding>
                 <element signature="e#18#41#0" expanded="true" />
               </folding>
@@ -90,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="upload_RPi.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="upload_RPi.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Add_new_ID/upload_RPi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+            <state relative-caret-position="246">
+              <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -143,18 +143,18 @@
       <file leaf-file-name="compare_mode.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Compare_ID/compare_mode.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="50" column="39" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="39" />
+            <state relative-caret-position="867">
+              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="display.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="display.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Image_processing/display.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+            <state relative-caret-position="187">
+              <caret line="39" column="59" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -164,7 +164,7 @@
         <entry file="file://$PROJECT_DIR$/take_pic_and_convert_to_BW.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -220,7 +220,6 @@
         <option value="$PROJECT_DIR$/IR_sensor/IR.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/take_pic_and_convert_to_BW.sh" />
-        <option value="$PROJECT_DIR$/Add_new_ID/upload_RPi.py" />
         <option value="$PROJECT_DIR$/Compare_ID/compare.py" />
         <option value="$PROJECT_DIR$/Compare_ID/compare_ID.sh" />
         <option value="$PROJECT_DIR$/Compare_ID/compare_improved.py" />
@@ -228,6 +227,7 @@
         <option value="$PROJECT_DIR$/Add_new_ID/add_new_ID.sh" />
         <option value="$PROJECT_DIR$/FSM_main.py" />
         <option value="$PROJECT_DIR$/Image_processing/display.py" />
+        <option value="$PROJECT_DIR$/Add_new_ID/upload_RPi.py" />
       </list>
     </option>
   </component>
@@ -703,15 +703,15 @@
     <entry file="file://$PROJECT_DIR$/take_pic_and_convert_to_BW.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Compare_ID/compare_mode.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="39" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="39" />
+        <state relative-caret-position="867">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -720,14 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="50" column="44" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Add_new_ID/upload_RPi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -766,8 +758,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FSM_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="123" column="26" selection-start-line="123" selection-start-column="26" selection-end-line="123" selection-end-column="26" />
+        <state relative-caret-position="83">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding>
             <element signature="e#18#41#0" expanded="true" />
           </folding>
@@ -776,8 +768,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Image_processing/display.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+        <state relative-caret-position="187">
+          <caret line="39" column="59" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Add_new_ID/upload_RPi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
           <folding />
         </state>
       </provider>

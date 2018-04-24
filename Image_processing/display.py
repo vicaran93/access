@@ -11,8 +11,8 @@ from PIL import Image
  '''
 
 # Path variables
-path = "/home/pi/Documents/access/camera/"  # "C:/Users/Victor/Documents/UMass Amherst/Fall 2017 (senior)/SDP/images/" # path without image name
-
+# path = "/home/pi/Documents/access/camera/"  # # path without image name
+path =  "C:/Users/Victor/Documents/UMass Amherst/Fall 2017 (senior)/SDP/images/"
 # Check input name
 if len(sys.argv) < 2:
 	print("No input detected!")
@@ -29,19 +29,20 @@ rows = img_np.shape[0]
 cols = img_np.shape[1]
 w = 700
 h = 500
-transform_x = 1280 #w #600 #648 #how wide to scale the jpg when replaying
-transform_y = 1024 #h #486 #how high to scale the jpg when replaying
+transform_x = 800 #w #600 #648 #how wide to scale the jpg when replaying
+transform_y = 600 #h #486 #how high to scale the jpg when replaying
 offset_x = 0 #20 #how far off to left corner to display photos
 offset_y = 0 # 10 #how far off to left corner to display photos
 
 try:
 	pygame.init()
-	screen = pygame.display.set_mode((transform_x,transform_y),FULLSCREEN) #(w,h),pygame.FULLSCREEN)
+	#screen = pygame.display.set_mode() #(w,h),pygame.FULLSCREEN)
+	screen = pygame.display.set_mode((transform_x, transform_y),pygame.FULLSCREEN)
 	pygame.display.set_caption(file_name)
 	pygame.mouse.set_visible(False) #hide the mouse cursor
 	#filename = image.jpg
 	img=pygame.image.load(path) #filename
-	img = pygame.transform.scale(img,(transform_x,transform_y))
+	#img = pygame.transform.scale(img,(transform_x,transform_y))
 	screen.blit(img,(offset_x,offset_y))
 	pygame.display.flip() # update the display
 	time.sleep(3) # pause

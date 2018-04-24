@@ -53,23 +53,24 @@ except botocore.exceptions.ClientError as e:
 s3 = boto3.client('s3')
 try:
 
+    file_name2 = file_name + ".jpg"
     with open(file_path, 'rb') as data:
         s3.upload_file(
-            file_path, aws_s3_bucket_name, file_name , # file_name --> 'folder/{}'.format(filename)
+            file_path, aws_s3_bucket_name, file_name2 , # file_name --> 'folder/{}'.format(filename)
             ExtraArgs={'ACL': 'public-read'}
         )
     # Upload image:
     if len(sys.argv) == 3: # two inputs
         file_name = file_name+template_number
 
-    file_name = file_name+".jpg"
+        file_name = file_name+".jpg"
 
 
-    with open(file_path, 'rb') as data:
-        s3.upload_file(
-            file_path, aws_s3_bucket_name, '9004/{}'.format(file_name) , # file_name --> 'folder/{}'.format(filename)
-            ExtraArgs={'ACL': 'public-read'}
-        )
+        with open(file_path, 'rb') as data:
+            s3.upload_file(
+                file_path, aws_s3_bucket_name, '9004/{}'.format(file_name) , # file_name --> 'folder/{}'.format(filename)
+                ExtraArgs={'ACL': 'public-read'}
+            )
 
     t2 = datetime.now()
     delta = t2 - t1  # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs

@@ -39,7 +39,7 @@ r, g, b = rgb_im.split()
 #new_img[:,:,2] = green
 
 #ave_green = mean(mean(green));
-ave_green = 100 # np.mean(g);
+ave_green = 60 # np.mean(g);
 #A[np.where(A>2)]
 #green(green < ave_green) = 0;
 

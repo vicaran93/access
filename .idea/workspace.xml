@@ -68,14 +68,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FSM_main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FSM_main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FSM_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="153" column="50" selection-start-line="153" selection-start-column="45" selection-end-line="153" selection-end-column="50" />
+            <state relative-caret-position="127">
+              <caret line="131" column="17" selection-start-line="131" selection-start-column="17" selection-end-line="131" selection-end-column="17" />
               <folding>
                 <element signature="e#18#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="img2bw.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Image_processing/img2bw.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,16 +170,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="take_pic_and_convert_to_BW.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/take_pic_and_convert_to_BW.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -214,7 +214,6 @@
         <option value="$PROJECT_DIR$/Image_processing/crop.py" />
         <option value="$PROJECT_DIR$/Image_processing/crop_template.py" />
         <option value="$PROJECT_DIR$/Distance_sensor/get_distance.py" />
-        <option value="$PROJECT_DIR$/Image_processing/img2bw.py" />
         <option value="$PROJECT_DIR$/Add_new_ID/add_new_ID_mode.sh" />
         <option value="$PROJECT_DIR$/Compare_ID/compare_mode.sh" />
         <option value="$PROJECT_DIR$/IR_sensor/IR.py" />
@@ -228,6 +227,7 @@
         <option value="$PROJECT_DIR$/Add_new_ID/upload_RPi.py" />
         <option value="$PROJECT_DIR$/Image_processing/display.py" />
         <option value="$PROJECT_DIR$/FSM_main.py" />
+        <option value="$PROJECT_DIR$/Image_processing/img2bw.py" />
       </list>
     </option>
   </component>
@@ -278,6 +278,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="access" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="access" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="access" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Image_processing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -602,13 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Image_processing/img2bw.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="70" column="26" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Image_processing/crop_template.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -760,11 +767,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FSM_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="153" column="50" selection-start-line="153" selection-start-column="45" selection-end-line="153" selection-end-column="50" />
+        <state relative-caret-position="127">
+          <caret line="131" column="17" selection-start-line="131" selection-start-column="17" selection-end-line="131" selection-end-column="17" />
           <folding>
             <element signature="e#18#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Image_processing/img2bw.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>

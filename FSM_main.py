@@ -111,7 +111,10 @@ def main():
                 main_function(min_threshold, max_threshold, new_ID_mode)
 
                 t2 = datetime.now()
-                delta = t2 - t1  # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs
+                delta = t2 - t1 - timedelta(seconds=10)- timedelta(seconds=9)
+                # - timedelta(seconds=10) # 10 seconds of showing Red or Green LEDs minus 3 displays
+                if not new_ID_mode:
+                    delta = delta - timedelta(seconds=3) # subtract displaying template time
                 print("Total Runtime:" + str(delta.seconds) + " s")
 
                 picture_taken = 1

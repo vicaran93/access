@@ -32,17 +32,17 @@ fi
 
 
 python ./LEDs/LED_and_pic.py $DATE # From location of main.py
-#python ./Image_processing/display.py $DATE # DISPLAY ORIGINAL IMAGE
+python ./Image_processing/display.py $DATE # DISPLAY ORIGINAL IMAGE
 
 # Call crop.py  to crop image that we just took
 python ./Image_processing/crop.py $DATE
 
 DATE+=$'_cropped'
-#python ./Image_processing/display.py $DATE # DISPLAY
+python ./Image_processing/display.py $DATE # DISPLAY
 
 python ./Image_processing/img2bw.py $DATE # This does not deal with the artifacts encountered in the imgs
 #python image_processing.py $DATE
 #python ./Image_processing/ip_color_segmentation.py $DATE
 
 DATE+=$'_bw'
-#python ./Image_processing/display.py $DATE # DISPLAY BLACK AND WHITE IMAGE
+python ./Image_processing/display.py $DATE # DISPLAY BLACK AND WHITE IMAGE

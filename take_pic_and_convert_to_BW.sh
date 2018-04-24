@@ -15,11 +15,11 @@
 DATE=$1
 # CHECK USER INPUT
 #echo "Picture name: $DATE"
-if [[ -n ${DATE//[0-9]/} ]]
-then
-    echo "Contains letters! Wrong ID"
-    exit
-fi
+#if [[ -n ${DATE//[0-9]/} ]]
+#then
+#    echo "Contains letters! Wrong ID"
+#    exit
+#fi
 STRLENGTH=$(echo -n $DATE | wc -m)
 #echo $STRLENGTH
 if (( $STRLENGTH != 4 ))

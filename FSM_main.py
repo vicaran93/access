@@ -88,7 +88,7 @@ def main():
 
                 t1 = datetime.now()
 
-                ID = str(input("Please enter ID number (4 digits):"))
+                ID = str(raw_input("Please enter ID number (4 digits):"))
                 ID = str(ID).zfill(4)
                 subprocess.call(['bash', 'take_pic_and_convert_to_BW.sh', ID])
 

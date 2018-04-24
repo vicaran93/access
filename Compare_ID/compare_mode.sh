@@ -14,11 +14,11 @@ read DATE
 
 # CHECK USER INPUT
 echo "Picture name: $DATE"
-if [[ -n ${DATE//[0-9]/} ]]
-then
-    echo "Contains letters! Wrong ID"
-    exit
-fi
+#if [[ -n ${DATE//[0-9]/} ]]
+#then
+#    echo "Contains letters! Wrong ID"
+#    exit
+#fi
 STRLENGTH=$(echo -n $DATE | wc -m)
 #echo $STRLENGTH
 if (( $STRLENGTH != 4 ))
@@ -31,13 +31,13 @@ fi
 
 
 python ./LEDs/LED_and_pic.py $DATE # From location of main.py
-python ./Image_processing/display.py $DATE # DISPLAY ORIGINAL IMAGE
+#python ./Image_processing/display.py $DATE # DISPLAY ORIGINAL IMAGE
 
 # Call crop.py  to crop image that we just took
 python ./Image_processing/crop.py $DATE
 
 DATE+=$'_cropped'
-python ./Image_processing/display.py $DATE # DISPLAY
+#python ./Image_processing/display.py $DATE # DISPLAY
 
 python ./Image_processing/img2bw.py $DATE # This does not deal with the artifacts encountered in the imgs
 #python image_processing.py $DATE
@@ -54,7 +54,7 @@ python ./Image_processing/crop_template.py $DATE # saves image as template.jpg
 #python ./Add_new_ID/add_coordinates.py 'location.txt' #assumming Hassaan's code creates this file
 
 NAME='template' # Hassaan's code saves template taken from $DATE as  template.png
-python ./Image_processing/display.py $NAME # DISPLAY TEMPLATE
+#python ./Image_processing/display.py $NAME # DISPLAY TEMPLATE
 
 # Call add_ID.py  to upload TEMPLATE to the server and then to compare
 #python ./Add_new_ID/add_ID.py $NAME  # uploading through Heroku

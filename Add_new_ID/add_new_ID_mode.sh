@@ -12,11 +12,11 @@
 echo "Please enter ID number (4 digits):"
 read DATE
 echo "Picture name: $DATE"
-if [[ -n ${DATE//[0-9]/} ]]
-then
-    echo "Contains letters! Wrong ID"
-    exit
-fi
+#if [[ -n ${DATE//[0-9]/} ]]
+#then
+#    echo "Contains letters! Wrong ID"
+#    exit
+#fi
 STRLENGTH=$(echo -n $DATE | wc -m)
 #echo $STRLENGTH
 if (( $STRLENGTH != 4 ))
@@ -26,7 +26,7 @@ then
 fi
 
 python ./LEDs/LED_and_pic.py $DATE
-python ./Image_processing/display.py $DATE # DISPLAY ORIGINAL IMAGE
+#python ./Image_processing/display.py $DATE # DISPLAY ORIGINAL IMAGE
 
 
 
@@ -38,14 +38,14 @@ python ./Image_processing/crop.py $DATE
 #echo $name
 
 DATE+=$'_cropped'
-python ./Image_processing/display.py $DATE #DISPLAY CROPPED IMAGE
+#python ./Image_processing/display.py $DATE #DISPLAY CROPPED IMAGE
 
 python ./Image_processing/img2bw.py $DATE
 #python image_processing.py $DATE
 #python ./Image_processing/ip_color_segmentation.py $DATE
 
 DATE+=$'_bw'
-python ./Image_processing/display.py $DATE #DISPLAY BLACK AND WHITE IMAGE
+#python ./Image_processing/display.py $DATE #DISPLAY BLACK AND WHITE IMAGE
 
 python ./Image_processing/average_white_test.py $DATE # Average white
 
